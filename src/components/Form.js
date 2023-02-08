@@ -61,7 +61,16 @@ function Form(){
                     <input type="text" name="sleep" placeholder="How much you sleep?" value={formData.sleep} onChange={handleChange}/>
                 </div>
                 <div>
-                    <input type="text" name="mood" placeholder="How you feelin?" value={formData.mood} onChange={handleChange}/>
+                    <label>How would you describe your mood?</label>
+                    <select id="mood" name="mood" onChange={handleChange}>
+                        <option value="ecstatic">Ecstatic</option>
+                        <option value="happy">Happy</option>
+                        <option value="neutral">Neutral</option>
+                        <option value="anxious">Anxious</option>
+                        <option value="scared">Scared</option>
+                        <option value="disgusted">Disgusted</option>
+                        <option value="angry">Angry</option>
+                    </select>
                 </div>
                 <div>
                     <input type="text" name="energy" placeholder="Describe your energy" value={formData.energy} onChange={handleChange}/>
