@@ -55,7 +55,7 @@ function Log(){
                         <h2>{post.date}</h2>
                         <p>Time logged: {post.time}</p>
                         <p>Hours slept: {post.sleep}</p>
-                        <p>Mood: {post.emotion}</p>
+                        <p>Mood: {post.mood}</p>
                         <p>Energy: {post.energy}</p>
                         <p>Notes: {post.notes}</p>
                         <button onClick={() => handleDelete(post.id)}>Delete</button> {/*arrow function so its only passed whenclicked*/}

@@ -6,7 +6,7 @@
       "date": "02/03/2023",
       "time": "8:00pm",
       "sleep": "8 hours",
-      "emotion": "ecstatic",
+      "mood": "ecstatic",
       "energy": "energetic",
       "notes": "Random text placeholder."
     },
@@ -16,7 +16,7 @@
       "date": "02/04/2023",
       "time": "9:00pm",
       "sleep": "4 hours",
-      "emotion": "sad",
+      "mood": "sad",
       "energy": "numb",
       "notes": "Random text placeholder."
     },
@@ -26,7 +26,7 @@
       "date": "02/05/2023",
       "time": "10:30pm",
       "sleep": "3.5 hours",
-      "emotion": "anxious",
+      "mood": "anxious",
       "energy": "restless",
       "notes": "Random text placeholder."
     },
@@ -36,7 +36,7 @@
       "date": "02/06/2023",
       "time": "6:30pm",
       "sleep": "8 hours",
-      "emotion": "angry",
+      "mood": "angry",
       "energy": "numb",
       "notes": "Random text placeholder."
     },
@@ -46,7 +46,7 @@
       "date": "02/07/2023",
       "time": "7:30pm",
       "sleep": "3 hours",
-      "emotion": "neutral",
+      "mood": "neutral",
       "energy": "calm",
       "notes": "Random text placeholder."
     }
