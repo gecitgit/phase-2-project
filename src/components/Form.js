@@ -12,7 +12,7 @@ function Form(){
         notes: "",
     });
 
-
+    const daysOfWeek = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
 
     function handleChange(event) {
         setFormData({
@@ -46,21 +46,17 @@ function Form(){
         const dayOfWeek = date.getDay();
         setFormData({
             ...formData,
-            day: dayOfWeek,
+            day: daysOfWeek[dayOfWeek],
+            date: e.target.value
         });
         console.log("this is the day of the week: ", dayOfWeek)
+        console.log("This is the same day of the week in string: ", daysOfWeek[dayOfWeek])
     }
 
     return(
         <div>
             <h2>form header</h2>
             <form onSubmit={handleSubmit}>
-                {/* <div>
-                    <label>
-                        Input the day: 
-                        <input type="text" name="day" placeholder="What day?" value={formData.day} onChange={handleChange}/>
-                    </label>
-                </div> */}
                 <div>
                     <label>What day are you logging? </label>
                     <input type="date" id="date" name="date" value={formData.date} onChange={(e) => {
@@ -80,8 +76,8 @@ function Form(){
                 </div>
                 <div>
                     <label>How would you describe your mood?</label>
-                    <select id="mood" name="mood" onChange={handleChange}>
-                        <option disabled>Select a mood...</option>
+                    <select id="mood" name="mood" value={formData.mood} onChange={handleChange}>
+                        <option>Select a mood...</option>
                         <option value="ecstatic">Ecstatic</option>
                         <option value="happy">Happy</option>
                         <option value="neutral">Neutral</option>
