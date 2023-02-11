@@ -41,28 +41,47 @@ function Form(){
         });
     }
 
+    function setDayOfWeek(e) {
+        const date = new Date(e.target.value);
+        const dayOfWeek = date.getDay();
+        setFormData({
+            ...formData,
+            day: dayOfWeek,
+        });
+        console.log("this is the day of the week: ", dayOfWeek)
+    }
+
     return(
         <div>
             <h2>form header</h2>
             <form onSubmit={handleSubmit}>
-                <div>
+                {/* <div>
                     <label>
                         Input the day: 
                         <input type="text" name="day" placeholder="What day?" value={formData.day} onChange={handleChange}/>
                     </label>
+                </div> */}
+                <div>
+                    <label>What day are you logging? </label>
+                    <input type="date" id="date" name="date" value={formData.date} onChange={(e) => {
+                        handleChange(e);
+                        setDayOfWeek(e);
+                    }}>
+
+                    </input>
                 </div>
                 <div>
-                    <input type="text" name="date" placeholder="What date?" value={formData.date} onChange={handleChange}/>
+                    <label>What time? </label>
+                    <input type="time" name="time" value={formData.time} onChange={handleChange}/>
                 </div>
                 <div>
-                    <input type="text" name="time" placeholder="What time?" value={formData.time} onChange={handleChange}/>
-                </div>
-                <div>
+                    <label>How long did you sleep last night? </label>
                     <input type="text" name="sleep" placeholder="How much you sleep?" value={formData.sleep} onChange={handleChange}/>
                 </div>
                 <div>
                     <label>How would you describe your mood?</label>
                     <select id="mood" name="mood" onChange={handleChange}>
+                        <option disabled>Select a mood...</option>
                         <option value="ecstatic">Ecstatic</option>
                         <option value="happy">Happy</option>
                         <option value="neutral">Neutral</option>
@@ -73,12 +92,20 @@ function Form(){
                     </select>
                 </div>
                 <div>
-                    <input type="text" name="energy" placeholder="Describe your energy" value={formData.energy} onChange={handleChange}/>
+                    <label>What is your overall energy like?</label>
+                    <select id="energy" name="energy" onChange={handleChange}>
+                        <option value="motivated">Motivated</option>
+                        <option value="lethargic">lethargic</option>
+                        <option value="restless">Restless</option>
+                        <option value="calm">Calm</option>
+                        <option value="numb">Numb</option>
+                    </select>
                 </div>
                 <div>
                     <input type="text" name="notes" placeholder="Add additional words" value={formData.notes} onChange={handleChange}/>
                 </div>
                 <input type="submit" value="Submit it man" />
+                <p>spacer</p>
             </form>
         </div>
     )
