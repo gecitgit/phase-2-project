@@ -15,6 +15,7 @@ function Form(){
     const daysOfWeek = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
 
     function handleChange(event) {
+        console.log("this is being changed: ", event.target.value)
         setFormData({
             ...formData,
             [event.target.name]: event.target.value,
@@ -59,7 +60,7 @@ function Form(){
             <form onSubmit={handleSubmit}>
                 <div>
                     <label>What day are you logging? </label>
-                    <input type="date" id="date" name="date" value={formData.date} onChange={(e) => {
+                    <input required type="date" id="date" name="date" value={formData.date} onChange={(e) => {
                         handleChange(e);
                         setDayOfWeek(e);
                     }}>
@@ -68,16 +69,16 @@ function Form(){
                 </div>
                 <div>
                     <label>What time? </label>
-                    <input type="time" name="time" value={formData.time} onChange={handleChange}/>
+                    <input required type="time" name="time" value={formData.time} onChange={handleChange}/>
                 </div>
                 <div>
                     <label>How long did you sleep last night? </label>
-                    <input type="text" name="sleep" placeholder="How much you sleep?" value={formData.sleep} onChange={handleChange}/>
+                    <input required type="text" name="sleep" placeholder="How much you sleep?" value={formData.sleep} onChange={handleChange}/>
                 </div>
-                <div>
+                <div className="dropDownWrapper">
                     <label>How would you describe your mood?</label>
-                    <select id="mood" name="mood" value={formData.mood} onChange={handleChange}>
-                        <option>Select a mood...</option>
+                    <select required id="mood" name="mood" value={formData.mood} onChange={handleChange}>
+                        <option disabled value="">Select a mood...</option>
                         <option value="ecstatic">Ecstatic</option>
                         <option value="happy">Happy</option>
                         <option value="neutral">Neutral</option>
@@ -87,9 +88,10 @@ function Form(){
                         <option value="angry">Angry</option>
                     </select>
                 </div>
-                <div>
+                <div className="dropDownWrapper">
                     <label>What is your overall energy like?</label>
-                    <select id="energy" name="energy" onChange={handleChange}>
+                    <select required id="energy" name="energy" value={formData.energy}onChange={handleChange}>
+                        <option disabled value="">Select your energy...</option>
                         <option value="motivated">Motivated</option>
                         <option value="lethargic">lethargic</option>
                         <option value="restless">Restless</option>

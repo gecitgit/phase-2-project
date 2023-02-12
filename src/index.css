@@ -10,3 +10,31 @@ p, h3, h2 {
   margin-bottom: 0;
   margin-top: 0;
 }
+
+.dropDownWrapper {
+  background-color: lightgreen;
+  color: black;
+  padding: 10px;
+  border-radius: 4px;
+  max-width: 600px;
+;}
+
+.dropDownWrapper select {
+  background-color: transparent;
+  color: black;
+  border: 0;
+  width: 100%;
+  padding: 8px;
+  box-shadow: 1px 1px black;
+}
+
+.dropDownWrapper select option:first-child {
+  background-color: lightgray;
+  color: gray;
+}
+
+.dropDownWrapper select option:not(:first-child) {
+  background-color: white;
+  color: black;
+}
+
