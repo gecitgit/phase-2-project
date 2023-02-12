@@ -1,6 +1,10 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+
 
 function Form(){
+
+    const navigate = useNavigate();
 
     const [formData, setFormData] = useState({
         day: "",
@@ -39,8 +43,9 @@ function Form(){
                 energy: formData.energy,
                 notes: formData.notes,
             }),
-        });
+        }) .then(() => navigate("/log"))
     }
+
 
     function setDayOfWeek(e) {
         const date = new Date(e.target.value);
@@ -99,10 +104,11 @@ function Form(){
                         <option value="numb">Numb</option>
                     </select>
                 </div>
-                <div>
-                    <input type="text" name="notes" placeholder="Add additional words" value={formData.notes} onChange={handleChange}/>
+                <div className="noteWrapper">
+                    <label htmlFor="notes">Feel free to add more words here:</label>
+                    <textarea type="text" name="notes" placeholder="Add additional words" rows="5" cols="150" value={formData.notes} onChange={handleChange}/>
                 </div>
-                <input type="submit" value="Submit it man" />
+                <input id="formSubmit" type="submit" value="Submit it man" />
                 <p>spacer</p>
             </form>
         </div>
