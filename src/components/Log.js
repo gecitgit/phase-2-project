@@ -49,19 +49,28 @@ function Log(){
             <h3>here is a hardcoded example</h3>
 
             <div style={logContainer}>
-                {posts.map((post) => (
-                    <div style={logBoxSmall} key={post.id}>
-                        <h3>{post.day}</h3>
-                        <h2>{post.date}</h2>
-                        <p>Time logged: {post.time}</p>
-                        <p>Hours slept: {post.sleep}</p>
-                        <p>Mood: {post.mood}</p>
-                        <p>Energy: {post.energy}</p>
-                        <p>Notes: {post.notes}</p>
-                        <button onClick={() => handleDelete(post.id)}>Delete</button> {/*arrow function so its only passed whenclicked*/}
-                        <button>Edit</button>
-                    </div>
-                    ))}
+                {posts.map((post) => {
+                    const hours = post.time.slice(0,2);
+                    const minutes = post.time.slice(3)
+                    const hours12 = hours % 12 || 12;
+                    const nightOrLight = hours < 12 ? 'am':'pm';
+                    const time12hr = `${hours12}:${minutes} ${nightOrLight}`
+
+                    return (
+                        <div style={logBoxSmall} key={post.id}>
+                            <h3>{post.day}</h3>
+                            <h2>{post.date}</h2>
+                            <p>Time logged: {time12hr}</p>
+                            <p>Hours slept: {post.sleep}</p>
+                            <p>Mood: {post.mood}</p>
+                            <p>Energy: {post.energy}</p>
+                            <p>Notes: {post.notes}</p>
+                            <button onClick={() => handleDelete(post.id)}>Delete</button> {/*arrow function so its only passed whenclicked*/}
+                            <button>Edit</button>
+                        </div>
+                    )
+                    
+                    })}
                 </div>            
             
             <p>this is the end of the hardcoded box</p>
