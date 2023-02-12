@@ -58,7 +58,7 @@ function Form(){
         <div>
             <h2>form header</h2>
             <form onSubmit={handleSubmit}>
-                <div>
+                <div className="dateWrapper">
                     <label>What day are you logging? </label>
                     <input required type="date" id="date" name="date" value={formData.date} onChange={(e) => {
                         handleChange(e);
@@ -67,11 +67,11 @@ function Form(){
 
                     </input>
                 </div>
-                <div>
+                <div className="timeWrapper">
                     <label>What time? </label>
                     <input required type="time" name="time" value={formData.time} onChange={handleChange}/>
                 </div>
-                <div>
+                <div className="sleepWrapper">
                     <label>How long did you sleep last night? </label>
                     <input required type="text" name="sleep" placeholder="How much you sleep?" value={formData.sleep} onChange={handleChange}/>
                 </div>

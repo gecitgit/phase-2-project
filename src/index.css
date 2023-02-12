@@ -17,6 +17,8 @@ p, h3, h2 {
   padding: 10px;
   border-radius: 4px;
   max-width: 600px;
+  margin-bottom: 10px;
+
 ;}
 
 .dropDownWrapper select {
@@ -38,3 +40,77 @@ p, h3, h2 {
   color: black;
 }
 
+.dateWrapper {
+  background-color: rgb(187, 137, 235);
+  padding: 10px;
+  border-radius: 8px;
+  max-width: 600px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 20px;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+ 
+.dateWrapper label {
+  height: auto;
+}
+
+.dateWrapper input {
+  background-color: transparent;
+  border: 0;
+  padding: 8px;
+}
+
+.dateWrapper input#date {
+  background-color: lightgray;
+  border-radius: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+
+.timeWrapper {
+  background-color: lightcoral;
+  padding: 10px;
+  border-radius: 8px;
+  max-width: 600px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 20px;
+  align-items: center;
+  margin-bottom: 10px;
+
+}
+
+.timeWrapper input {
+  background-color: lightgray;
+  border-radius: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.sleepWrapper {
+  background-color: lightseagreen;
+  padding: 10px;
+  border-radius: 8px;
+  max-width: 600px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 20px;
+  align-items: center;
+  margin-bottom: 10px;
+
+}
+
+.sleepWrapper input{
+  background-color: lightgray;
+  border: 0;
+  padding: 8px;
+  border-radius: 10px;
+
+}
