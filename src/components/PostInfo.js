@@ -1,11 +1,14 @@
 import React from "react";
 
-function PostInfo() {
-    return (
-        <div>
-            <p>this will hold the full post info</p>
+function PostInfo(props) {
+    return (props.trigger) ? (
+        <div className="popup">
+            <div className="popupInner">
+                <button className="close-btn">CLOSE</button>
+                {props.children}
+            </div>
         </div>
-    )
+    ) : "";
 }
 
 

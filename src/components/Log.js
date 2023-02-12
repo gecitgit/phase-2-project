@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import PostInfo from "./PostInfo";
 
 const logBoxSmall = {
     display: "flex",
@@ -18,9 +19,9 @@ const logContainer = {
 }
 
 
-
 function Log(){
     const [posts, setPosts] = useState([]);
+    const [buttonPopup, setButtonPopup] = useState(false);
 
     useEffect(() => {
         fetch("http://localhost:4000/posts")
@@ -43,41 +44,6 @@ function Log(){
             });
     }
 
-    const monthsOfYear = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
-
-    function handleDateConverter(post) {
-        const postDate = new Date(`${post.date} ${post.time}`)
-        // console.log("this is the post Date being passed through", postDate)
-        // const postDateMonthNumber = postDate.getMonth();
-        // console.log("this is the date month number: " ,postDateMonthNumber)
-        // const postDateMonth = monthsOfYear[postDateMonthNumber]
-        // console.log("this is the word of the month: ", postDateMonth)
-        // const postDateNum = postDate.getDate();
-        // console.log("this is the post date number: ", postDateNum)
-        // const postDateYear = postDate.getFullYear();
-        // console.log("this is the year: ", postDateYear)
-        // const stringedDate = `${postDateMonth} ${postDateNum}, ${postDateYear}`;
-        // console.log("this is the stringedDate: ", stringedDate)
-        // return stringedDate;
-        const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }
-        console.log('this is blah: ', postDate.toLocaleDateString(undefined, options))
-        return postDate.toLocaleDateString(undefined, options);
-    }
-
-    function handleTimeConversion(post) {
-        const timeEvent = new Date(`${post.date} ${post.time}`)
-        console.log('time thingy: ', timeEvent.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit"}));
-        return timeEvent.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit"});
-
-        // const hours = post.time.slice(0,2);
-        // const minutes = post.time.slice(3)
-        // const hours12 = hours % 12 || 12;
-        // const nightOrLight = hours < 12 ? 'am':'pm';
-        // const time12hr = `${hours12}:${minutes} ${nightOrLight}`
-        // return time12hr;
-    }
-
-
     return (
         <div>
             <h1>this is the page that holds the log entries</h1>
@@ -88,20 +54,21 @@ function Log(){
                     return new Date(`${a.date} ${a.time}`) - new Date(`${b.date} ${b.time}`);
                 }).map((post) => {
                     const postDate = new Date(`${post.date} ${post.time}`)
-                    // const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }
-                    
 
                     return (
                         <div style={logBoxSmall} key={post.id}>
                             <h3>{postDate.toLocaleDateString(undefined, { weekday: 'long'})}</h3>
                             <h2>{postDate.toLocaleDateString(undefined, { month: 'long', day: 'numeric', year: 'numeric'})}</h2>
-                            <p>Time logged: {postDate.toLocaleTimeString(undefined, {hour: "2-digit", minute: "2-digit"})}</p>
+                            <p>Time logged: {postDate.toLocaleTimeString(undefined, {hour: "numeric", minute: "2-digit"})}</p>
                             <p>Hours slept: {post.sleep}</p>
                             <p>Mood: {post.mood}</p>
                             <p>Energy: {post.energy}</p>
-                            <p>Notes: {post.notes}</p>
+                            {/* <p>Notes: {post.notes}</p> */}
                             <button onClick={() => handleDelete(post.id)}>Delete</button> {/*arrow function so its only passed whenclicked*/}
-                            <button>Edit</button>
+                            <button>See More</button>
+                            <PostInfo trigger={buttonPopup}>
+                                <h2>popup</h2>
+                            </PostInfo>
                         </div>
                     )
                     
