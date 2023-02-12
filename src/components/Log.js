@@ -43,6 +43,28 @@ function Log(){
             });
     }
 
+    const monthsOfYear = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+
+    function handleDateConverter(post) {
+        const postDate = new Date(post.date)
+        const postDateMonthNumber = postDate.getMonth();
+        const postDateMonth = monthsOfYear[postDateMonthNumber]
+        const postDateNum = postDate.getDate();
+        const postDateYear = postDate.getFullYear();
+        const stringedDate = `${postDateMonth} ${postDateNum}, ${postDateYear}`;
+        return stringedDate;
+    }
+
+    function handleTimeConversion(post) {
+        const hours = post.time.slice(0,2);
+        const minutes = post.time.slice(3)
+        const hours12 = hours % 12 || 12;
+        const nightOrLight = hours < 12 ? 'am':'pm';
+        const time12hr = `${hours12}:${minutes} ${nightOrLight}`
+        return time12hr;
+    }
+
+
     return (
         <div>
             <h1>this is the page that holds the log entries</h1>
@@ -50,16 +72,14 @@ function Log(){
 
             <div style={logContainer}>
                 {posts.map((post) => {
-                    const hours = post.time.slice(0,2);
-                    const minutes = post.time.slice(3)
-                    const hours12 = hours % 12 || 12;
-                    const nightOrLight = hours < 12 ? 'am':'pm';
-                    const time12hr = `${hours12}:${minutes} ${nightOrLight}`
+                    const stringedDate = handleDateConverter(post);
+                    const time12hr = handleTimeConversion(post);
+                    
 
                     return (
                         <div style={logBoxSmall} key={post.id}>
                             <h3>{post.day}</h3>
-                            <h2>{post.date}</h2>
+                            <h2>{stringedDate}</h2>
                             <p>Time logged: {time12hr}</p>
                             <p>Hours slept: {post.sleep}</p>
                             <p>Mood: {post.mood}</p>
