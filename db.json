@@ -1,54 +1,34 @@
 {
   "posts": [
     {
-      "id": 0,
-      "day": "Friday",
-      "date": "02/03/2023",
-      "time": "8:00pm",
-      "sleep": "8 hours",
-      "mood": "ecstatic",
-      "energy": "energetic",
-      "notes": "Random text placeholder."
-    },
-    {
-      "id": 1,
-      "day": "Saturday",
-      "date": "02/04/2023",
-      "time": "9:00pm",
-      "sleep": "4 hours",
-      "mood": "sad",
-      "energy": "numb",
-      "notes": "Random text placeholder."
-    },
-    {
-      "id": 2,
-      "day": "Sunday",
-      "date": "02/05/2023",
-      "time": "10:30pm",
-      "sleep": "3.5 hours",
-      "mood": "anxious",
-      "energy": "restless",
-      "notes": "Random text placeholder."
-    },
-    {
-      "id": 3,
-      "day": "Monday",
-      "date": "02/06/2023",
-      "time": "6:30pm",
-      "sleep": "8 hours",
-      "mood": "angry",
-      "energy": "numb",
-      "notes": "Random text placeholder."
-    },
-    {
-      "id": 4,
       "day": "Tuesday",
-      "date": "02/07/2023",
-      "time": "7:30pm",
-      "sleep": "3 hours",
+      "date": "2023-02-14",
+      "time": "22:28",
+      "sleep": "none",
+      "mood": "happy",
+      "energy": "motivated",
+      "notes": "",
+      "id": 7
+    },
+    {
+      "day": "Thursday",
+      "date": "1837-01-19",
+      "time": "05:41",
+      "sleep": "3",
+      "mood": "neutral",
+      "energy": "restless",
+      "notes": "",
+      "id": 8
+    },
+    {
+      "day": "Wednesday",
+      "date": "2023-02-22",
+      "time": "22:16",
+      "sleep": "3",
       "mood": "neutral",
       "energy": "calm",
-      "notes": "Random text placeholder."
+      "notes": "",
+      "id": 9
     }
   ]
 }
