@@ -14,7 +14,6 @@ function Form(){
         notes: "",
     });
 
-    const daysOfWeek = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
 
     function handleChange(event) {
         console.log("this is being changed: ", event.target.value)
@@ -44,19 +43,6 @@ function Form(){
         }) .then(() => navigate("/log"))
     }
 
-
-    function setDayOfWeek(e) {
-        const date = new Date(e.target.value);
-        const dayOfWeek = date.getDay();
-        setFormData({
-            ...formData,
-            day: daysOfWeek[dayOfWeek],
-            date: e.target.value
-        });
-        console.log("this is the day of the week: ", dayOfWeek)
-        console.log("This is the same day of the week in string: ", daysOfWeek[dayOfWeek])
-    }
-
     return(
         <div>
             <form onSubmit={handleSubmit}>
@@ -65,10 +51,7 @@ function Form(){
                 
                 <div className="dateWrapper">
                     <label htmlFor="date">Please choose the date in question.</label>
-                    <input required type="date" id="date" name="date" value={formData.date} onChange={(e) => {
-                        handleChange(e);
-                        setDayOfWeek(e);
-                    }}>
+                    <input required type="date" id="date" name="date" value={formData.date} onChange={handleChange}>
 
                     </input>
                 </div>

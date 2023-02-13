@@ -7,12 +7,14 @@
 
 Our phase 2 project required us to make a single page web app using React for the front end and then using a json-server for the backend.  We were tasked with creating a component tree, monitoring our state and props and presenting an app that allowed us to make POST and GET requests to our server.  
 
-I once again took inspiration from my personal life in deciding what to do for this project. Over the years I've been a big proponent of journaling to help work through life's problems and after experimenting with some of the labs in this phase, as well as some brainstorming for the future phase 5 project, I felt like I had a clear direction.  I'm excited to see where this project will go in the future. Feel free to read more about this project and others at my [Medium blog]().
+I once again took inspiration from my personal life in deciding what to do for this project. Over the years I've been a big proponent of journaling to help work through life's problems and after experimenting with some of the labs in this phase, as well as some brainstorming for the future phase 5 project, I felt like I had a clear direction.  I'm excited to see where this project will go in the future. Feel free to read more about this project and others at my [Medium blog](https://medium.com/@t.ismailgeci/phase-2-jumping-into-the-deep-end-of-the-frontend-with-react-6222906491a3).
 
 ---
 ## Deployment
 
-The project is being hosted on ???
+[Render](https://render.com/) is handling the backend of the app by hosting the db.json file.
+[Netlify](https://docs.netlify.com/#get-started) is handling the frontend.
+MindLOG is currently being hosted [here](https://mindlog.netlify.app/).
 
 ---
 ## App usage with screenshots
@@ -48,4 +50,4 @@ Here is a gif displaying the full app in motion including the POST, GET and DELE
 ## Credits
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
+The updated [favicon](https://icons8.com/icons/set/mind--c-e85a4f) was provided by [Icons8](https://icons8.com/).
