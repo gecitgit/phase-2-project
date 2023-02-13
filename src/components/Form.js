@@ -66,7 +66,7 @@ function Form(){
                 <legend>Log your day!</legend>
                 
                 <div className="dateWrapper">
-                    <label>What day are you logging? </label>
+                    <label htmlFor="date">Please choose the date in question.</label>
                     <input required type="date" id="date" name="date" value={formData.date} onChange={(e) => {
                         handleChange(e);
                         setDayOfWeek(e);
@@ -75,40 +75,40 @@ function Form(){
                     </input>
                 </div>
                 <div className="timeWrapper">
-                    <label>What time? </label>
+                    <label htmlFor="time">When did this occur?</label>
                     <input required type="time" name="time" value={formData.time} onChange={handleChange}/>
                 </div>
                 <div className="sleepWrapper">
-                    <label>How long did you sleep last night? </label>
-                    <input required type="number" name="sleep" placeholder="How much you sleep?" value={formData.sleep} min="0" max="24" step="0.5" onChange={handleChange}/>
+                    <label htmlFor="sleep">How much sleep did you get last night? </label>
+                    <input required type="number" name="sleep" placeholder="0-24 hours / 30m increments" value={formData.sleep} min="0" max="24" step="0.5" onChange={handleChange}/>
                 </div>
                 <div className="formDivWrapper">
-                    <label>How would you describe your mood?</label>
+                    <label htmlFor="mood">How would you describe your mood?</label>
                     <select required id="mood" name="mood" value={formData.mood} onChange={handleChange}>
                         <option disabled value="">Select a mood...</option>
-                        <option value="ecstatic">Ecstatic</option>
-                        <option value="happy">Happy</option>
-                        <option value="neutral">Neutral</option>
-                        <option value="anxious">Anxious</option>
-                        <option value="scared">Scared</option>
-                        <option value="disgusted">Disgusted</option>
-                        <option value="angry">Angry</option>
+                        <option value="🤩 Ecstatic">Ecstatic</option>
+                        <option value="😀 Happy">Happy</option>
+                        <option value="😐 Neutral">Neutral</option>
+                        <option value="😰 Anxious">Anxious</option>
+                        <option value="😨 Scared">Scared</option>
+                        <option value="🤢 Disgusted">Disgusted</option>
+                        <option value="😡 Angry">Angry</option>
                     </select>
                 </div>
                 <div className="formDivWrapper">
-                    <label>What is your overall energy like?</label>
+                    <label htmlFor="energy">What is your overall energy like?</label>
                     <select required id="energy" name="energy" value={formData.energy}onChange={handleChange}>
                         <option disabled value="">Select your energy...</option>
-                        <option value="motivated">Motivated</option>
-                        <option value="lethargic">lethargic</option>
-                        <option value="restless">Restless</option>
-                        <option value="calm">Calm</option>
-                        <option value="numb">Numb</option>
+                        <option value="Motivated">Motivated</option>
+                        <option value="Lethargic">lethargic</option>
+                        <option value="Restless">Restless</option>
+                        <option value="Calm">Calm</option>
+                        <option value="Numb">Numb</option>
                     </select>
                 </div>
                 <div className="noteWrapper">
-                    <label htmlFor="notes">Feel free to add more words here:</label>
-                    <textarea type="text" name="notes" placeholder="Add additional words" rows="5" cols="150" value={formData.notes} onChange={handleChange}/>
+                    <label htmlFor="notes">Feel free to add any additional notes here:</label>
+                    <textarea type="text" name="notes" placeholder="[optional] Add any additional notes you'd like to remember for today!" rows="5" cols="150" value={formData.notes} onChange={handleChange}/>
                 </div>
                 <input id="formSubmit" type="submit" value="submit form" />
                 </fieldset>
