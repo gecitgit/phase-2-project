@@ -9,25 +9,15 @@ function Home() {
     }
 
     return (
-        <div>
-            <h1>MindLog</h1>
-            <h1>MoodLog</h1>
-            <h1>MoodTracker</h1>
-            <h1>EmotionDiary</h1>
-            <h1>MoodJournal</h1>
-            <p>h1 text </p>
-            <p>put random words to intro user to the app with direction</p>
-            <p>
-                use log-detail as a new component to display the notes for the entry
-
-                Show	/movies/:id	GET	Display a single movie's info
-
-
-
-                stretch goal: intro a Trends tab that lets the user see trends of mood over time -- scatterplot?
-
-            </p>
-            <button onClick={startClick}>Get started! link this to /form</button>
+        <div className="homeDiv">
+            <div className="homeTextHolder">
+                <h1 className="home-title">Welcome to <span style={{ color: "#e85a4f"}}>MindLog</span>!</h1>
+                <h3>Take a load off and write down your day's worries in your very own personalized mood tracker!  Fill out the form below or in the navigation bar above to store your entry. Visit the Journal Log tab to view a collection of all of your posts.</h3>
+                <br></br>
+                <h3>In this version of the project every user is the only user so please make sure to clean up after yourself in the journal log. Keep in mind that your submitted data will persist so the next user can see your posts!</h3>
+                <br></br>
+                <button className="joinForm" onClick={startClick}>Check out the form!</button>
+            </div>
         </div>
         
     )
