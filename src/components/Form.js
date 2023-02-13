@@ -78,7 +78,7 @@ function Form(){
                 </div>
                 <div className="sleepWrapper">
                     <label>How long did you sleep last night? </label>
-                    <input required type="text" name="sleep" placeholder="How much you sleep?" value={formData.sleep} onChange={handleChange}/>
+                    <input required type="number" name="sleep" placeholder="How much you sleep?" value={formData.sleep} min="0" max="24" step="0.5" onChange={handleChange}/>
                 </div>
                 <div className="dropDownWrapper">
                     <label>How would you describe your mood?</label>
