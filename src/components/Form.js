@@ -61,10 +61,9 @@ function Form(){
 
     return(
         <div>
-            <h2>form header</h2>
             <form onSubmit={handleSubmit}>
                 <fieldset>
-                <legend>Form stuff</legend>
+                <legend>Log your day!</legend>
                 
                 <div className="dateWrapper">
                     <label>What day are you logging? </label>
@@ -111,8 +110,7 @@ function Form(){
                     <label htmlFor="notes">Feel free to add more words here:</label>
                     <textarea type="text" name="notes" placeholder="Add additional words" rows="5" cols="150" value={formData.notes} onChange={handleChange}/>
                 </div>
-                <input id="formSubmit" type="submit" value="Submit it man" />
-                <p>spacer</p>
+                <input id="formSubmit" type="submit" value="submit form" />
                 </fieldset>
             </form>
         </div>
