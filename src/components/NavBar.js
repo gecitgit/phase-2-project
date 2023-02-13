@@ -14,17 +14,17 @@ const navStyles = {
 //this needs to be updated to v6 notation for activestyle etc
 function NavBar() {
     return (
-        <div>
-            <NavLink to="/" style={navStyles}>
+        <div className="navBarStyle">
+            <NavLink to="/" className="navBarChild">
                 Hooome
             </NavLink>
-            <NavLink to="/about" style={navStyles}>
+            <NavLink to="/about" className="navBarChild">
                 About
             </NavLink>
-            <NavLink to="/form" style={navStyles}>
+            <NavLink to="/form" className="navBarChild">
                 Form
             </NavLink>
-            <NavLink to="/log" style={navStyles}>
+            <NavLink to="/log" className="navBarChild">
                 Journal Log
             </NavLink>
         </div>

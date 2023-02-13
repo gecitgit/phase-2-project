@@ -63,6 +63,9 @@ function Form(){
         <div>
             <h2>form header</h2>
             <form onSubmit={handleSubmit}>
+                <fieldset>
+                <legend>Form stuff</legend>
+                
                 <div className="dateWrapper">
                     <label>What day are you logging? </label>
                     <input required type="date" id="date" name="date" value={formData.date} onChange={(e) => {
@@ -80,7 +83,7 @@ function Form(){
                     <label>How long did you sleep last night? </label>
                     <input required type="number" name="sleep" placeholder="How much you sleep?" value={formData.sleep} min="0" max="24" step="0.5" onChange={handleChange}/>
                 </div>
-                <div className="dropDownWrapper">
+                <div className="formDivWrapper">
                     <label>How would you describe your mood?</label>
                     <select required id="mood" name="mood" value={formData.mood} onChange={handleChange}>
                         <option disabled value="">Select a mood...</option>
@@ -93,7 +96,7 @@ function Form(){
                         <option value="angry">Angry</option>
                     </select>
                 </div>
-                <div className="dropDownWrapper">
+                <div className="formDivWrapper">
                     <label>What is your overall energy like?</label>
                     <select required id="energy" name="energy" value={formData.energy}onChange={handleChange}>
                         <option disabled value="">Select your energy...</option>
@@ -110,6 +113,7 @@ function Form(){
                 </div>
                 <input id="formSubmit" type="submit" value="Submit it man" />
                 <p>spacer</p>
+                </fieldset>
             </form>
         </div>
     )

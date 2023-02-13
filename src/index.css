@@ -1,9 +1,14 @@
 body {
   background-color: lightblue;
+  margin: 0;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 }
 
 #root {
-  background-color: green;
+  /* background-color: #1f2833;
+  color: #C5C6C7; */
+  background: #EAE7DC;
+  color: #575752;
 }
 
 p, h3, h2 {
@@ -11,31 +16,102 @@ p, h3, h2 {
   margin-top: 0;
 }
 
-.dropDownWrapper {
-  background-color: lightgreen;
+.navBarStyle {
+  /* color: #C5C6C7;
+  background: #0B0C10; */
+  color: #575752;
+  background: #d8c3a5;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  box-shadow: 0px 4px #e85a4f;
+}
+
+.navBarChild {
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 22px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  text-decoration: none;
+  font-weight: bolder;
+
+}
+
+.navBarChild.active {
+  /* background-color: rgba(69, 162, 157, 0.26); */
+  /* color: white; */
+  /* box-shadow: 0px 4px #66FCF1; */
+  background-color: #eae7dc;
+  color: #e85a4f;
+  box-shadow: 0px 4px #e85a4f;
+  border-radius: 2px;
+
+}
+
+a, a:visited, a:hover, a:active {
+  color: inherit;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+fieldset {
+  display: flex;
+  flex-direction: column;
+  background-color: lightblue;
+  width: 60%;
+  align-items: center;
+}
+
+fieldset.input{
+  width: 100%;
+}
+
+legend {
+  background-color: orange;
+  padding: 10px;
+}
+
+.formDivWrapper {
+  background-color: slategray;
   color: black;
   padding: 10px;
-  border-radius: 4px;
-  max-width: 600px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 20px;
+  align-items: center;
   margin-bottom: 10px;
+  width: 80%;
+}
 
-;}
 
-.dropDownWrapper select {
-  background-color: transparent;
+
+.formDivWrapper select {
+  background-color: lightgray;
   color: black;
   border: 0;
-  width: 100%;
+  border-radius: 8px;
   padding: 8px;
   box-shadow: 1px 1px black;
 }
 
-.dropDownWrapper select option:first-child {
+.formDivWrapper select option:first-child {
   background-color: lightgray;
   color: gray;
 }
 
-.dropDownWrapper select option:not(:first-child) {
+.formDivWrapper select option:not(:first-child) {
   background-color: white;
   color: black;
 }
@@ -44,8 +120,8 @@ p, h3, h2 {
   background-color: rgb(187, 137, 235);
   padding: 10px;
   border-radius: 8px;
-  max-width: 600px;
   display: flex;
+  width: 80%;
   flex-direction: row;
   justify-content: space-between;
   font-size: 20px;
@@ -60,8 +136,8 @@ p, h3, h2 {
 
 .dateWrapper input {
   background-color: transparent;
-  border: 0;
   padding: 8px;
+  height: 17px;
 }
 
 .dateWrapper input#date {
@@ -69,37 +145,40 @@ p, h3, h2 {
   border-radius: 10px;
   padding-left: 20px;
   padding-right: 20px;
+  border: 0;
+  box-shadow: 1px 1px black;
 }
-
 
 .timeWrapper {
   background-color: lightcoral;
   padding: 10px;
   border-radius: 8px;
-  max-width: 600px;
+  width: 80%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   font-size: 20px;
   align-items: center;
   margin-bottom: 10px;
-
 }
 
 .timeWrapper input {
   background-color: lightgray;
   border-radius: 10px;
-  padding-top: 4px;
-  padding-bottom: 4px;
+  padding-top: 8px;
+  padding-bottom: 8px;
   padding-left: 20px;
   padding-right: 20px;
+  border: 0;
+  box-shadow: 1px 1px black;
+  height: 17px;
 }
 
 .sleepWrapper {
   background-color: lightseagreen;
   padding: 10px;
   border-radius: 8px;
-  max-width: 600px;
+  width: 80%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -111,10 +190,12 @@ p, h3, h2 {
 
 .sleepWrapper input{
   background-color: lightgray;
-  border: 0;
   padding: 8px;
   border-radius: 10px;
   width: 150px;
+  border: 0;
+  box-shadow: 1px 1px black;
+  height: 17px;
 
 }
 
@@ -122,17 +203,20 @@ p, h3, h2 {
   background-color: cornsilk;
   padding: 10px;
   border-radius: 10px;
-  max-width: 600px;
+  width: 80%;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  font-size: 20px;
 }
 
 .noteWrapper textarea{
   background-color: lightgray;
   border: 0;
   border-radius: 10px;
-  padding: 0;
+  padding: 6px 6px;
+  margin-top: 5px;
+  font-family: inherit;
 }
 
 #formSubmit {

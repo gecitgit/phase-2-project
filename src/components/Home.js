@@ -10,7 +10,11 @@ function Home() {
 
     return (
         <div>
-            <h1>home title </h1>
+            <h1>MindLog</h1>
+            <h1>MoodLog</h1>
+            <h1>MoodTracker</h1>
+            <h1>EmotionDiary</h1>
+            <h1>MoodJournal</h1>
             <p>h1 text </p>
             <p>put random words to intro user to the app with direction</p>
             <p>
