@@ -7,7 +7,7 @@ function Log(){
     const [selectedPost, setSelectedPost] = useState({});
 
     useEffect(() => {
-        fetch("http://localhost:4000/posts")
+        fetch("https://mindlog-db.onrender.com/posts")
             .then((r) => r.json())
             .then((data) => setPosts(data));
     }, []);
@@ -17,7 +17,7 @@ function Log(){
         console.log("delete was pressed")
         console.log(id)
         
-        fetch(`http://localhost:4000/posts/${id}`, {
+        fetch(`https://mindlog-db.onrender.com/posts/${id}`, {
             method: "DELETE",
         })
             .then((r) => r.json())

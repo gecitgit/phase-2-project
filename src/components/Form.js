@@ -27,7 +27,7 @@ function Form(){
     function handleSubmit(event) {
         event.preventDefault();
         console.log("submit was pressed", formData)
-        fetch("http://localhost:4000/posts", {
+        fetch("https://mindlog-db.onrender.com/posts", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",

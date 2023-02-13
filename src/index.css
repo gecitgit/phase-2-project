@@ -78,6 +78,7 @@ a, a:visited, a:hover, a:active {
   font-weight: bolder;
   font-family: inherit;
   padding: 0;
+  cursor: pointer;
 }
 
 .joinForm::before{
@@ -347,6 +348,8 @@ label {
   width: clamp(300px, 45%, 400px);
   flex-direction: column;
   align-items: center;
+  margin-right: 5px;
+  margin-left: 5px;
 }
 
 .postBtns {
