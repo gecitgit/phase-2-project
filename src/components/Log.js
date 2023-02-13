@@ -22,6 +22,8 @@ const logContainer = {
 function Log(){
     const [posts, setPosts] = useState([]);
     const [buttonPopup, setButtonPopup] = useState(false);
+    const [selectedPost, setSelectedPost] = useState({});
+    const [trigger, setTrigger] = useState(false);
 
     useEffect(() => {
         fetch("http://localhost:4000/posts")
@@ -44,6 +46,11 @@ function Log(){
             });
     }
 
+    function handleSeeMore(post) {
+        setSelectedPost(post);
+        setTrigger(true);
+    }
+
     return (
         <div>
             <h1>this is the page that holds the log entries</h1>
@@ -63,11 +70,15 @@ function Log(){
                             <p>Hours slept: {post.sleep}</p>
                             <p>Mood: {post.mood}</p>
                             <p>Energy: {post.energy}</p>
-                            {/* <p>Notes: {post.notes}</p> */}
-                            <button onClick={() => handleDelete(post.id)}>Delete</button> {/*arrow function so its only passed whenclicked*/}
-                            <button>See More</button>
-                            <PostInfo trigger={buttonPopup}>
-                                <h2>popup</h2>
+                            <button onClick={() => handleDelete(post.id)}>Delete</button> 
+                            {/*arrow function so its only passed whenclicked*/}
+                            <button onClick={(e) =>  {
+                                setButtonPopup(true)
+                                handleSeeMore(post)}}
+                                >See More</button>
+                            <PostInfo trigger={buttonPopup} setTrigger={setButtonPopup} postInfo={selectedPost}>
+                                <h2>post id: {post.id}</h2>
+                                <h2>post mood: {post.mood}</h2>
                             </PostInfo>
                         </div>
                     )
