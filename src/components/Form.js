@@ -91,7 +91,7 @@ function Form(){
                         <option value="😐 Neutral">Neutral</option>
                         <option value="😰 Anxious">Anxious</option>
                         <option value="😨 Scared">Scared</option>
-                        <option value="🤢 Disgusted">Disgusted</option>
+                        <option value="😢 Sad">Sad</option>
                         <option value="😡 Angry">Angry</option>
                     </select>
                 </div>
@@ -100,7 +100,7 @@ function Form(){
                     <select required id="energy" name="energy" value={formData.energy}onChange={handleChange}>
                         <option disabled value="">Select your energy...</option>
                         <option value="Motivated">Motivated</option>
-                        <option value="Lethargic">lethargic</option>
+                        <option value="Lethargic">Lethargic</option>
                         <option value="Restless">Restless</option>
                         <option value="Calm">Calm</option>
                         <option value="Numb">Numb</option>

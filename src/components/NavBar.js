@@ -16,7 +16,7 @@ function NavBar() {
     return (
         <div className="navBarStyle">
             <NavLink to="/" className="navBarChild">
-                Hooome
+                Home
             </NavLink>
             <NavLink to="/about" className="navBarChild">
                 About

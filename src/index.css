@@ -400,13 +400,28 @@ label {
   padding: 32px;
   width: 100%;
   max-width: 640px;
-  background-color: white;
+  background-color: #EAE7DC;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.popupInner h1, h3 {
+  margin: 0;
+  padding: 0;
 }
 
 .popupInner .close-btn {
-  position: absolute;
-  top: 16px;
-  right: 16px;
+  display: flex;
+  padding: 10px;
+  color: #eae7dc;
+  background-color: #e98074;
+  margin-top: 10px;
+  width: 200px;
+  font-size: large;
+  justify-content: center;
+  font-weight: bolder;
+  letter-spacing: 0.1em;
 }
 
 /* end of postinfo page code*/

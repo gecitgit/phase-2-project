@@ -1,34 +1,64 @@
 {
   "posts": [
     {
-      "day": "Tuesday",
-      "date": "2023-02-14",
-      "time": "22:28",
-      "sleep": "none",
-      "mood": "happy",
-      "energy": "motivated",
-      "notes": "",
-      "id": 7
+      "day": "Monday",
+      "date": "2023-01-09",
+      "time": "13:04",
+      "sleep": "8",
+      "mood": "😰 Anxious",
+      "energy": "Restless",
+      "notes": "My birthday is coming up in a few days and I'm nervous!",
+      "id": 1
     },
     {
       "day": "Thursday",
-      "date": "1837-01-19",
-      "time": "05:41",
+      "date": "2023-01-19",
+      "time": "08:04",
       "sleep": "3",
-      "mood": "neutral",
-      "energy": "restless",
-      "notes": "",
-      "id": 8
+      "mood": "😀 Happy",
+      "energy": "Motivated",
+      "notes": "Today is my birthday. I didn't sleep too well because I was anxious about my plans for the afternoon. I'm looking forward to hanging out with friends!",
+      "id": 2
+    },
+    {
+      "day": "Tuesday",
+      "date": "2023-01-24",
+      "time": "22:07",
+      "sleep": "4.5",
+      "mood": "😢 Sad",
+      "energy": "Numb",
+      "notes": "Post-birthday feelings. Getting old stinks!",
+      "id": 3
     },
     {
       "day": "Wednesday",
-      "date": "2023-02-22",
-      "time": "22:16",
-      "sleep": "3",
-      "mood": "neutral",
-      "energy": "calm",
-      "notes": "",
-      "id": 9
+      "date": "2023-02-01",
+      "time": "14:07",
+      "sleep": "10",
+      "mood": "😀 Happy",
+      "energy": "Motivated",
+      "notes": "Today was a great day so far! I slept a ton and there were birds outside chirping because of the nice weather.",
+      "id": 4
+    },
+    {
+      "day": "Wednesday",
+      "date": "2023-02-08",
+      "time": "23:31",
+      "sleep": "5",
+      "mood": "😐 Neutral",
+      "energy": "Calm",
+      "notes": "Did you know that some animals live in shoes?",
+      "id": 5
+    },
+    {
+      "day": "Saturday",
+      "date": "2023-02-11",
+      "time": "15:13",
+      "sleep": "8",
+      "mood": "😡 Angry",
+      "energy": "Numb",
+      "notes": "Here are some song lyrics: \nAnd I know, I know, I know, I know\nI know, I know, I know, I know\nI know, I know, I know, I know\nI know, I know, I know, I know\nI know, I know, I know, I know\nI know, I know, I know, I know\nI know, I know\nHey, I ought to leave the young thing alone\nBut ain't no sunshine when she's gone",
+      "id": 6
     }
   ]
 }
