@@ -1,6 +1,13 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 function Home() {
+    const navigate = useNavigate();
+
+    function startClick() {
+        navigate("/form")
+    }
+
     return (
         <div>
             <h1>home title </h1>
@@ -16,7 +23,7 @@ function Home() {
                 stretch goal: intro a Trends tab that lets the user see trends of mood over time -- scatterplot?
 
             </p>
-            <button>Get started! link this to /form</button>
+            <button onClick={startClick}>Get started! link this to /form</button>
         </div>
         
     )
