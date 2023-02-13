@@ -5,8 +5,6 @@ body {
 }
 
 #root {
-  /* background-color: #1f2833;
-  color: #C5C6C7; */
   background: #EAE7DC;
   color: #575752;
   height: 100vh;
@@ -18,8 +16,6 @@ p, h3, h2 {
 }
 
 .navBarStyle {
-  /* color: #C5C6C7;
-  background: #0B0C10; */
   color: #575752;
   background: #d8c3a5;
   padding-top: 15px;
@@ -45,9 +41,6 @@ p, h3, h2 {
 }
 
 .navBarChild.active {
-  /* background-color: rgba(69, 162, 157, 0.26); */
-  /* color: white; */
-  /* box-shadow: 0px 4px #66FCF1; */
   background-color: #eae7dc;
   color: #e85a4f;
   box-shadow: 0px 4px #e85a4f;

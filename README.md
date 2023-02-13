@@ -1,4 +1,25 @@
-# Getting Started with Create React App
+# MindLOG
+## Welcome to my Phase 2 project at Flatiron School's Software Engineering Program!
+
+---
+
+## Description
+
+Our phase 2 project required us to make a single page web app using React for the front end and then using a json-server for the backend.  We were tasked with creating a component tree, monitoring our state and props and presenting an app that allowed us to make POST and GET requests to our server.  
+
+I once again took inspiration from my personal life in deciding what to do for this project. Over the years I've been a big proponent of journaling to help work through life's problems and after experimenting with some of the labs in this phase, as well as some brainstorming for the future phase 5 project, I felt like I had a clear direction.  I'm excited to see where this project will go in the future. Feel free to read more about this project and others at my [Medium blog]().
+
+---
+## Deployment
+
+
+
+---
+## App usage with screenshots
+
+
+---
+## Credits
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
