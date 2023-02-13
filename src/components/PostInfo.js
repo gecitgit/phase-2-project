@@ -2,7 +2,7 @@ import React from "react";
 
 function PostInfo({ trigger, setTrigger, postInfo }) {
     console.log('this is the postinfo : ', postInfo)
-    
+
     return (trigger) ? (
         <div className="popup">
             <div className="popupInner">
@@ -14,6 +14,5 @@ function PostInfo({ trigger, setTrigger, postInfo }) {
         </div>
     ) : "";
 }
-
 
 export default PostInfo;

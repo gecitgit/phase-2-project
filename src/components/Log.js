@@ -23,7 +23,6 @@ function Log(){
     const [posts, setPosts] = useState([]);
     const [buttonPopup, setButtonPopup] = useState(false);
     const [selectedPost, setSelectedPost] = useState({});
-    const [trigger, setTrigger] = useState(false);
 
     useEffect(() => {
         fetch("http://localhost:4000/posts")
@@ -46,9 +45,13 @@ function Log(){
             });
     }
 
+    //handleSeeMore updates selectedPost with the post that is being clicked
+    //sets trigger to true which will show the component
+    //selectedPost is passed as a prop to PostInfo
+    //this way PostInfo only handles what is being sent down
     function handleSeeMore(post) {
         setSelectedPost(post);
-        setTrigger(true);
+        setButtonPopup(true)
     }
 
     return (
