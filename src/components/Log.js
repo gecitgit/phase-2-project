@@ -1,24 +1,6 @@
 import React, { useEffect, useState } from "react";
 import PostInfo from "./PostInfo";
 
-const logBoxSmall = {
-    display: "flex",
-    background: "lightgray",
-    color: "firebrick",
-    flexDirection: "column",
-    alignItems: "center",
-    minWidth: "300px",
-    marginBottom: "15px",
-    border: "2px solid red",
-    margin: "0",
-}
-
-const logContainer = {
-    display: "flex",
-    flexWrap: "wrap"
-}
-
-
 function Log(){
     const [posts, setPosts] = useState([]);
     const [buttonPopup, setButtonPopup] = useState(false);
@@ -55,30 +37,33 @@ function Log(){
     }
 
     return (
-        <div>
-            <h1>this is the page that holds the log entries</h1>
-            <h3>here is a hardcoded example</h3>
-
-            <div style={logContainer}>
+        <div className="textParentDiv">
+            <h1 className="textTextDiv">Welcome to your Journal</h1>
+            <div className="logContainer">
                 {posts.sort(function(a,b) {
                     return new Date(`${a.date} ${a.time}`) - new Date(`${b.date} ${b.time}`);
                 }).map((post) => {
                     const postDate = new Date(`${post.date} ${post.time}`)
 
                     return (
-                        <div style={logBoxSmall} key={post.id}>
+                        <div className="logBoxSmall" key={post.id}>
                             <h3>{postDate.toLocaleDateString(undefined, { weekday: 'long'})}</h3>
                             <h2>{postDate.toLocaleDateString(undefined, { month: 'long', day: 'numeric', year: 'numeric'})}</h2>
-                            <p>Time logged: {postDate.toLocaleTimeString(undefined, {hour: "numeric", minute: "2-digit"})}</p>
-                            <p>Hours slept: {post.sleep}</p>
-                            <p>Mood: {post.mood}</p>
-                            <p>Energy: {post.energy}</p>
-                            <button onClick={() => handleDelete(post.id)}>Delete</button> 
-                            {/*arrow function so its only passed whenclicked*/}
-                            <button onClick={(e) =>  {
-                                setButtonPopup(true)
-                                handleSeeMore(post)}}
-                                >See More</button>
+                            <h3>Time logged: {postDate.toLocaleTimeString(undefined, {hour: "numeric", minute: "2-digit"})}</h3>
+                            <h3>{`Sleep: ${post.sleep} hours`}</h3>
+                            <h3>Mood: {post.mood}</h3>
+                            <h3>Energy: {post.energy}</h3>
+                            <div className="postBtns">
+                                <button className="deleteLog" onClick={() => handleDelete(post.id)}>Delete Post</button>
+                                {/*arrow function so its only passed whenclicked*/}
+                                <button className="logInfo" onClick={(e) =>  {
+                                    setButtonPopup(true)
+                                    handleSeeMore(post)}}
+                                    >
+                                    Read More
+                                </button>
+                            </div>
+                                                        
                             <PostInfo trigger={buttonPopup} setTrigger={setButtonPopup} postInfo={selectedPost}>
                                 <h2>post id: {post.id}</h2>
                                 <h2>post mood: {post.mood}</h2>
@@ -88,9 +73,7 @@ function Log(){
                     
                     })}
                 </div>            
-            
-            <p>this is the end of the hardcoded box</p>
-        </div>
+            </div>
     )
 }
 

@@ -59,25 +59,78 @@ a, a:visited, a:hover, a:active {
   color: inherit;
 }
 
-.joinForm {
-  padding: 20px;
+.textParentDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
+
+.textTextDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+}
+
+.joinForm {
+  color: #575752;
+  text-decoration: none;
+  font-size: 32px;
+  border: 0;
+  border-bottom: 1px #e98074 dashed;
+  border-top: 1px #e98074 dashed;
+  background: none;
+  font-weight: bolder;
+  font-family: inherit;
+  padding: 0;
+}
+
+.joinForm::before{
+  margin-left: auto;
+}
+
+.joinForm::after, .joinForm::before {
+  content: '';
+  width: 0%;
+  height: 6px;
+  background: #e85a4f;
+  display: block;
+  transition: 0.5s;
+}
+
+.joinForm:hover {
+  color: #e85a4f;
+  transition: 0.5s;
+  border: none;
+  border-bottom: 1px rgba(233, 128, 116, 0.027);
+  border-top: 1px rgba(233, 128, 116, 0.027);
+}
+
+.joinForm:hover::after, .joinForm:hover::before {
+  width: 100%;
+}
+
+.h1Title {
+  font-size: 50px;
+}
+
 
 form {
   display: flex;
   justify-content: center;
   align-items: center;
+
 }
 
 fieldset {
   display: flex;
   flex-direction: column;
   background-color: #eae7dc;
-  width: 60%;
   align-items: center;
   border: 5px solid #e85a4f;
   margin-top: 20px;
-
 }
 
 fieldset.input{
@@ -169,6 +222,7 @@ label {
   padding-right: 20px;
   border: 2px solid #e85a4f;
   box-shadow: 1px 1px #e98074;
+  width: 176px;
 }
 
 .timeWrapper {
@@ -197,6 +251,7 @@ label {
   border: 2px solid #e85a4f;
   box-shadow: 1px 1px #e98074;
   height: 17px;
+  width: 176px;
 }
 
 .sleepWrapper {
@@ -221,7 +276,7 @@ label {
   background-color: #eae7dc;
   padding: 8px;
   border-radius: 10px;
-  width: 150px;
+  width: 200px;
   border: 0;
   box-shadow: 1px 1px #e98074;
   height: 17px;
@@ -272,7 +327,59 @@ label {
   background-color: #EAE7DC;
   color: #e85a4f;
   border: 2px solid #e85a4f;
+  transition: .4s;
+  cursor: pointer;
 }
+
+/* Log styling starts */
+.logContainer {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #d8c3a5;
+  color: #575752;
+  flex-direction: row;
+  align-items: center;
+  border: 2px solid #e85a4f;
+  margin: 0;
+  justify-content: space-evenly;
+  padding-top: 10px;
+}
+
+.logBoxSmall {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #EAE7DC;
+  margin-bottom: 15px;
+  border: 2px solid #e85a4f;
+  width: clamp(300px, 45%, 400px);
+  flex-direction: column;
+  align-items: center;
+}
+
+.postBtns {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+.deleteLog{
+  background-color: #e85a4f;
+  color: #EAE7DC;
+  margin-right: 10px;
+  padding: 10px;
+}
+
+.logInfo{
+  background-color: gold;
+  padding: 10px;
+}
+
+
+/* Log styling ends */
+
+
 
 /* long code for the postinfo page */
 .popup {
