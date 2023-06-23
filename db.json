@@ -1,64 +1,903 @@
 {
-  "posts": [
+  "users": [
     {
-      "day": "Monday",
-      "date": "2023-01-09",
-      "time": "13:04",
-      "sleep": "8",
-      "mood": "😰 Anxious",
-      "energy": "Restless",
-      "notes": "My birthday is coming up in a few days and I'm nervous!",
-      "id": 1
+      "id": 1,
+      "username": "arco",
+      "password": "hunter1",
+      "firstname": "Taulant",
+      "lastname": "Ismailgeci",
+      "email": "t.ismailgeci@gmail.com",
+      "posts": [
+        {
+          "day": "Monday",
+          "date": "2023-01-09",
+          "time": "13:04",
+          "sleep": "8",
+          "mood": "😰 Anxious",
+          "energy": "Restless",
+          "notes": "My birthday is coming up in a few days and I'm nervous!",
+          "id": 1
+        },
+        {
+          "day": "Thursday",
+          "date": "2023-01-19",
+          "time": "08:04",
+          "sleep": "3",
+          "mood": "😀 Happy",
+          "energy": "Motivated",
+          "notes": "Today is my birthday. I didn't sleep too well because I was anxious about my plans for the afternoon. I'm looking forward to hanging out with friends!",
+          "id": 2
+        },
+        {
+          "day": "Tuesday",
+          "date": "2023-01-24",
+          "time": "22:07",
+          "sleep": "4.5",
+          "mood": "😢 Sad",
+          "energy": "Numb",
+          "notes": "Post-birthday feelings. Getting old stinks!",
+          "id": 3
+        },
+        {
+          "day": "Wednesday",
+          "date": "2023-02-01",
+          "time": "14:07",
+          "sleep": "10",
+          "mood": "😀 Happy",
+          "energy": "Motivated",
+          "notes": "Today was a great day so far! I slept a ton and there were birds outside chirping because of the nice weather.",
+          "id": 4
+        },
+        {
+          "day": "Wednesday",
+          "date": "2023-02-08",
+          "time": "23:31",
+          "sleep": "5",
+          "mood": "😐 Neutral",
+          "energy": "Calm",
+          "notes": "Did you know that some animals live in shoes?",
+          "id": 5
+        },
+        {
+          "day": "Saturday",
+          "date": "2023-02-11",
+          "time": "15:13",
+          "sleep": "8",
+          "mood": "😡 Angry",
+          "energy": "Numb",
+          "notes": "Here are some song lyrics: \nAnd I know, I know, I know, I know\nI know, I know, I know, I know\nI know, I know, I know, I know\nI know, I know, I know, I know\nI know, I know, I know, I know\nI know, I know, I know, I know\nI know, I know\nHey, I ought to leave the young thing alone\nBut ain't no sunshine when she's gone",
+          "id": 6
+        }
+      ]
     },
     {
-      "day": "Thursday",
-      "date": "2023-01-19",
-      "time": "08:04",
-      "sleep": "3",
-      "mood": "😀 Happy",
-      "energy": "Motivated",
-      "notes": "Today is my birthday. I didn't sleep too well because I was anxious about my plans for the afternoon. I'm looking forward to hanging out with friends!",
-      "id": 2
+      "id": 2,
+      "username": "bob",
+      "password": "hunter2",
+      "firstname": "Bill",
+      "lastname": "Bobby",
+      "email": "grapes@gmail.com",
+      "posts": [
+        {
+          "day": "Monday",
+          "date": "2023-01-09",
+          "time": "13:04",
+          "sleep": "8",
+          "mood": "😰 Anxious",
+          "energy": "Restless",
+          "notes": "My birthday is coming up in a few days and I'm nervous!",
+          "id": 1
+        },
+        {
+          "day": "Tuesday",
+          "date": "2023-01-10",
+          "time": "12:30",
+          "sleep": "7",
+          "mood": "😃 Happy",
+          "energy": "Energetic",
+          "notes": "Feeling great today!",
+          "id": 2
+        }
+      ]
     },
     {
-      "day": "Tuesday",
-      "date": "2023-01-24",
-      "time": "22:07",
-      "sleep": "4.5",
-      "mood": "😢 Sad",
-      "energy": "Numb",
-      "notes": "Post-birthday feelings. Getting old stinks!",
-      "id": 3
+      "username": "Willie",
+      "password": "ill",
+      "firstname": "Willie",
+      "lastname": "Randolph",
+      "email": "will@r.com",
+      "posts": [
+        {
+          "day": "Monday",
+          "date": "2023-01-09",
+          "time": "13:04",
+          "sleep": "8",
+          "mood": "😰 Anxious",
+          "energy": "Restless",
+          "notes": "My birthday is coming up in a few days and I'm nervous!",
+          "id": 1
+        },
+        {
+          "day": "Thursday",
+          "date": "2023-01-19",
+          "time": "08:04",
+          "sleep": "3",
+          "mood": "😀 Happy",
+          "energy": "Motivated",
+          "notes": "Today is my birthday. I didn't sleep too well because I was anxious about my plans for the afternoon. I'm looking forward to hanging out with friends!",
+          "id": 2
+        },
+        {
+          "day": "Tuesday",
+          "date": "2023-01-24",
+          "time": "22:07",
+          "sleep": "4.5",
+          "mood": "😢 Sad",
+          "energy": "Numb",
+          "notes": "Post-birthday feelings. Getting old stinks!",
+          "id": 3
+        },
+        {
+          "day": "Wednesday",
+          "date": "2023-02-01",
+          "time": "14:07",
+          "sleep": "10",
+          "mood": "😀 Happy",
+          "energy": "Motivated",
+          "notes": "Today was a great day so far! I slept a ton and there were birds outside chirping because of the nice weather.",
+          "id": 4
+        },
+        {
+          "day": "Wednesday",
+          "date": "2023-02-08",
+          "time": "23:31",
+          "sleep": "5",
+          "mood": "😐 Neutral",
+          "energy": "Calm",
+          "notes": "Did you know that some animals live in shoes?",
+          "id": 5
+        },
+        {
+          "id": "0b88e69c-9be8-4569-a651-486c7388dfb1",
+          "day": "Friday",
+          "date": "2023-05-12",
+          "time": "19:24",
+          "sleep": "7.5",
+          "mood": "😢 Sad",
+          "energy": "Lethargic",
+          "notes": ""
+        },
+        {
+          "id": 6,
+          "day": "Saturday",
+          "date": "2023-05-28",
+          "time": "09:25",
+          "sleep": "4",
+          "mood": "😐 Neutral",
+          "energy": "Calm",
+          "notes": "Early morning today!"
+        },
+        {
+          "id": "5e45cda2-2cdf-46a1-a709-5ae3a310c206",
+          "day": "Sunday",
+          "date": "2023-06-04",
+          "time": "06:37",
+          "sleep": "4",
+          "mood": "🤩 Ecstatic",
+          "energy": "Motivated",
+          "notes": ""
+        },
+        {
+          "id": "4bf27f33-045c-4d57-9fab-dd50018c2313",
+          "day": "Sunday",
+          "date": "2023-06-04",
+          "time": "07:39",
+          "sleep": "4",
+          "mood": "🤩 Ecstatic",
+          "energy": "Motivated",
+          "notes": "poop poop poop poop poop poop"
+        },
+        {
+          "id": "5c01ff65-1ffc-42dc-a2ca-b9aa593b2abf",
+          "day": "Sunday",
+          "date": "2023-06-04",
+          "time": "09:38",
+          "sleep": "3.5",
+          "mood": "🤩 Ecstatic",
+          "energy": "Motivated",
+          "notes": ""
+        },
+        {
+          "id": "d0579981-0f15-4cab-810e-33458985f289",
+          "day": "Thursday",
+          "date": "2023-06-08",
+          "time": "11:39",
+          "sleep": "4",
+          "mood": "🤩 Ecstatic",
+          "energy": "Motivated",
+          "notes": ""
+        },
+        {
+          "id": "4d664374-bd1d-4261-ab92-6a72bc0a2268",
+          "day": "Friday",
+          "date": "2023-06-09",
+          "time": "15:03",
+          "sleep": "5",
+          "mood": "😐 Neutral",
+          "energy": "Calm",
+          "notes": ""
+        },
+        {
+          "id": "926ff108-a89b-4a58-bd02-be21787c8fb2",
+          "day": "Friday",
+          "date": "2023-06-09",
+          "time": "16:23",
+          "sleep": "6.5",
+          "mood": "😀 Happy",
+          "energy": "Calm",
+          "notes": ""
+        },
+        {
+          "id": "002d4562-7cab-4575-8c34-5b63ea937f33",
+          "day": "Monday",
+          "date": "2023-06-12",
+          "time": "18:54",
+          "sleep": "5",
+          "mood": "🤩 Ecstatic",
+          "energy": "Lethargic",
+          "notes": "asfsa sdfa "
+        },
+        {
+          "id": "789cfc24-9fd5-4bfa-80a2-6ff5550fe44e",
+          "day": "Saturday",
+          "date": "2023-05-27",
+          "time": "09:24",
+          "sleep": "5.5",
+          "mood": "🤩 Ecstatic",
+          "energy": "Motivated",
+          "notes": ""
+        }
+      ],
+      "id": 9
     },
     {
-      "day": "Wednesday",
-      "date": "2023-02-01",
-      "time": "14:07",
-      "sleep": "10",
-      "mood": "😀 Happy",
-      "energy": "Motivated",
-      "notes": "Today was a great day so far! I slept a ton and there were birds outside chirping because of the nice weather.",
-      "id": 4
+      "username": "admin",
+      "password": "admin123",
+      "firstname": "admin",
+      "lastname": "admin",
+      "email": "admin@admin.com",
+      "posts": [
+        {
+          "id": "f8c7714e-50c9-478b-9e84-05a1d789d450",
+          "day": "Saturday",
+          "date": "2023-04-01",
+          "time": "05:46",
+          "sleep": "4",
+          "mood": "🤩 Ecstatic",
+          "energy": "Motivated",
+          "notes": ""
+        },
+        {
+          "id": "da23e657-d2fd-4d7e-9020-d007fc14e579",
+          "day": "Sunday",
+          "date": "2023-04-02",
+          "time": "08:47",
+          "sleep": "8",
+          "mood": "😀 Happy",
+          "energy": "Restless",
+          "notes": "Not a bad day so far."
+        },
+        {
+          "id": "3824ff08-c282-4b38-b9af-44e381a19eb1",
+          "day": "Monday",
+          "date": "2023-04-03",
+          "time": "09:09",
+          "sleep": "7.5",
+          "mood": "😐 Neutral",
+          "energy": "Lethargic",
+          "notes": "Start each day with a positive thought and a grateful heart."
+        },
+        {
+          "id": "003f764c-65d1-44c7-9377-062d3f5556a7",
+          "day": "Tuesday",
+          "date": "2023-04-04",
+          "time": "08:52",
+          "sleep": "8",
+          "mood": "😰 Anxious",
+          "energy": "Numb",
+          "notes": "Today is your day. Your mountain is waiting so get on your way."
+        },
+        {
+          "id": "6abe71cd-e25d-4d56-b675-7d13451ab91f",
+          "day": "Wednesday",
+          "date": "2023-04-05",
+          "time": "07:36",
+          "sleep": "7.5",
+          "mood": "😢 Sad",
+          "energy": "Restless",
+          "notes": "Light tomorrow with today"
+        },
+        {
+          "id": "ac517ed5-00c9-4d39-8bfc-3581ba893d41",
+          "day": "Thursday",
+          "date": "2023-04-06",
+          "time": "09:53",
+          "sleep": "9",
+          "mood": "😰 Anxious",
+          "energy": "Calm",
+          "notes": "Yesterday is not ours to recover, but tomorrow is ours to win or lose. "
+        },
+        {
+          "id": "15d932b3-a556-432d-a733-35058ff2a83b",
+          "day": "Friday",
+          "date": "2023-04-07",
+          "time": "08:08",
+          "sleep": "6.5",
+          "mood": "😐 Neutral",
+          "energy": "Calm",
+          "notes": "When it rains, it pours? but soon, the sun shines again. Stay positive. Better days are on their way."
+        },
+        {
+          "id": "c30aa905-713c-4cac-bf79-c6428e9f9810",
+          "day": "Saturday",
+          "date": "2023-04-08",
+          "time": "11:54",
+          "sleep": "3.5",
+          "mood": "😐 Neutral",
+          "energy": "Numb",
+          "notes": "Learn the rules like a pro, so you can break them like an artist."
+        },
+        {
+          "id": "56f624f4-3685-430d-814e-e6776a9f3d5f",
+          "day": "Sunday",
+          "date": "2023-04-09",
+          "time": "12:09",
+          "sleep": "9",
+          "mood": "😐 Neutral",
+          "energy": "Calm",
+          "notes": "Never give up on a dream just because of the time it will take to accomplish it. The time will pass anyway."
+        },
+        {
+          "id": "9c7a4026-65ba-45d7-9095-d9a237465aaa",
+          "day": "Monday",
+          "date": "2023-04-10",
+          "time": "09:56",
+          "sleep": "6",
+          "mood": "😐 Neutral",
+          "energy": "Calm",
+          "notes": "Just one small positive thought in the morning can change your whole day."
+        },
+        {
+          "id": "e1266edd-05fc-45ac-b701-65f3f775aadf",
+          "day": "Tuesday",
+          "date": "2023-04-11",
+          "time": "07:57",
+          "sleep": "5.5",
+          "mood": "😡 Angry",
+          "energy": "Numb",
+          "notes": "Push yourself because no one else is going to do it for you."
+        },
+        {
+          "id": "87efbc25-00bb-4f40-b39c-3159ed4e36bb",
+          "day": "Thursday",
+          "date": "2023-04-13",
+          "time": "08:29",
+          "sleep": "5.5",
+          "mood": "😀 Happy",
+          "energy": "Lethargic",
+          "notes": "Yesterday is not ours to recover, but tomorrow is ours to win or lose."
+        },
+        {
+          "id": "58548ec2-9238-45f7-b82d-addfaa6a18ea",
+          "day": "Sunday",
+          "date": "2023-04-16",
+          "time": "06:58",
+          "sleep": "2.5",
+          "mood": "😰 Anxious",
+          "energy": "Restless",
+          "notes": "Every object, every being, is a jar of delight. Be a connoisseur."
+        },
+        {
+          "id": "0919e3fd-76b7-4f01-9ea5-6842ca74b1d3",
+          "day": "Wednesday",
+          "date": "2023-04-19",
+          "time": "06:02",
+          "sleep": "3",
+          "mood": "😰 Anxious",
+          "energy": "Restless",
+          "notes": "Yesterday’s home runs don’t win today’s games."
+        },
+        {
+          "id": "73a18453-69e4-434c-875a-46d475733ba5",
+          "day": "Saturday",
+          "date": "2023-04-22",
+          "time": "15:59",
+          "sleep": "14",
+          "mood": "😐 Neutral",
+          "energy": "Calm",
+          "notes": "You’re off to great places, today is your day. Your mountain is waiting, so get on your way."
+        },
+        {
+          "id": "68c2598e-0038-4a69-888c-8a15f15cbbcb",
+          "day": "Sunday",
+          "date": "2023-04-23",
+          "time": "08:00",
+          "sleep": "4.5",
+          "mood": "😐 Neutral",
+          "energy": "Calm",
+          "notes": "Don’t count the days, make the days count."
+        },
+        {
+          "id": "1b82cf08-b711-41b6-844d-93cb915c9747",
+          "day": "Monday",
+          "date": "2023-04-24",
+          "time": "07:04",
+          "sleep": "4",
+          "mood": "😡 Angry",
+          "energy": "Lethargic",
+          "notes": "Make each day your masterpiece"
+        },
+        {
+          "id": "80a76020-9633-454b-9cd9-0e6198902bef",
+          "day": "Tuesday",
+          "date": "2023-04-25",
+          "time": "09:10",
+          "sleep": "6.5",
+          "mood": "😀 Happy",
+          "energy": "Motivated",
+          "notes": "Believe you can and you’re halfway there."
+        },
+        {
+          "id": "677b10c4-6746-4019-a366-0c049001e564",
+          "day": "Wednesday",
+          "date": "2023-04-26",
+          "time": "13:11",
+          "sleep": "7.5",
+          "mood": "🤩 Ecstatic",
+          "energy": "Motivated",
+          "notes": "Don’t judge each day by the harvest you reap but by the seeds that you plant."
+        },
+        {
+          "id": "1c5bde1d-a0ea-464c-9ca8-b341cb7229c3",
+          "day": "Thursday",
+          "date": "2023-04-27",
+          "time": "10:13",
+          "sleep": "9.5",
+          "mood": "🤩 Ecstatic",
+          "energy": "Motivated",
+          "notes": "Every day, there are 1,440 minutes. That means we have 1,440 daily opportunities to make a positive impact. "
+        },
+        {
+          "id": "c774e39f-e96c-4051-be9a-2bdd3f41e71d",
+          "day": "Friday",
+          "date": "2023-04-28",
+          "time": "11:15",
+          "sleep": "6.5",
+          "mood": "🤩 Ecstatic",
+          "energy": "Motivated",
+          "notes": "You’ve got to get up every morning with determination if you’re going to go to bed with satisfaction"
+        },
+        {
+          "id": "8f12bb1c-d0b8-4b6b-99ab-9f5213964450",
+          "day": "Saturday",
+          "date": "2023-04-29",
+          "time": "13:15",
+          "sleep": "5.5",
+          "mood": "😀 Happy",
+          "energy": "Lethargic",
+          "notes": "When you want something, all the universe conspires in helping you to achieve it. "
+        },
+        {
+          "id": "b6e84cad-6754-4965-b35d-3a19df8204a0",
+          "day": "Sunday",
+          "date": "2023-04-30",
+          "time": "10:18",
+          "sleep": "5.5",
+          "mood": "🤩 Ecstatic",
+          "energy": "Motivated",
+          "notes": "Keep your face to the sunshine and you cannot see a shadow."
+        },
+        {
+          "id": "9872e3ba-22ba-436a-b931-845ff021a870",
+          "day": "Monday",
+          "date": "2023-05-01",
+          "time": "08:19",
+          "sleep": "4.5",
+          "mood": "🤩 Ecstatic",
+          "energy": "Motivated",
+          "notes": "Be thankful for everything that happens in your life; it’s all an experience."
+        },
+        {
+          "id": "824b746b-edc4-452f-9be5-6462a42a7870",
+          "day": "Tuesday",
+          "date": "2023-05-02",
+          "time": "07:17",
+          "sleep": "4.5",
+          "mood": "😐 Neutral",
+          "energy": "Lethargic",
+          "notes": "If you think you are too small to make a difference, try sleeping with a mosquito."
+        },
+        {
+          "id": "6fe39e3c-df6e-4279-ae43-ae22a33a513b",
+          "day": "Wednesday",
+          "date": "2023-05-03",
+          "time": "06:18",
+          "sleep": "3.5",
+          "mood": "😐 Neutral",
+          "energy": "Lethargic",
+          "notes": "Just don’t give up trying to do what you really want to do. Where there are love and inspiration, I don’t think you can go wrong."
+        },
+        {
+          "id": "ef2dbb5a-b1ae-4119-be77-d02898ed00b5",
+          "day": "Thursday",
+          "date": "2023-05-04",
+          "time": "11:33",
+          "sleep": "7.5",
+          "mood": "😡 Angry",
+          "energy": "Restless",
+          "notes": "Stay positive in every situation and everything you do, never stop trying, have faith don’t stop due to failure."
+        },
+        {
+          "id": "336277aa-2358-42d0-8922-1eb68aebc8da",
+          "day": "Friday",
+          "date": "2023-05-05",
+          "time": "09:23",
+          "sleep": "5",
+          "mood": "😡 Angry",
+          "energy": "Numb",
+          "notes": "One of the lessons that I grew up with was to always stay true to yourself and never let what somebody else says distract you from your goals."
+        },
+        {
+          "id": "ae4253ff-381a-4860-9c7d-cdf5e0af8655",
+          "day": "Saturday",
+          "date": "2023-05-06",
+          "time": "12:21",
+          "sleep": "8",
+          "mood": "😨 Scared",
+          "energy": "Restless",
+          "notes": "Be mindful. Be grateful. Be positive. Be true. Be kind."
+        },
+        {
+          "id": "4180f46b-f515-4dc6-8870-d1dbf73c6ba4",
+          "day": "Sunday",
+          "date": "2023-05-07",
+          "time": "07:25",
+          "sleep": "5.5",
+          "mood": "😢 Sad",
+          "energy": "Lethargic",
+          "notes": "Life is a shipwreck but we must not forget to sing in the lifeboats."
+        },
+        {
+          "id": "af71ae0a-50da-4e56-ac1f-788c41150241",
+          "day": "Monday",
+          "date": "2023-05-08",
+          "time": "11:19",
+          "sleep": "6.5",
+          "mood": "😢 Sad",
+          "energy": "Numb",
+          "notes": "No one is perfect – that’s why pencils have erasers. "
+        },
+        {
+          "id": "2f43a855-c114-472e-b0b8-332f12d4fe31",
+          "day": "Tuesday",
+          "date": "2023-05-09",
+          "time": "09:45",
+          "sleep": "6.5",
+          "mood": "😢 Sad",
+          "energy": "Restless",
+          "notes": "If everything seems under control, you’re not going fast enough"
+        },
+        {
+          "id": "fffddde7-7299-4a68-a09a-59a22fe27cbb",
+          "day": "Wednesday",
+          "date": "2023-05-10",
+          "time": "09:28",
+          "sleep": "6",
+          "mood": "😀 Happy",
+          "energy": "Calm",
+          "notes": "Do the one thing you think you cannot do. Fail at it. Try again. Do better the second time. The only people who never tumble are those who never mount the high wire"
+        },
+        {
+          "id": "d05efd80-6922-4736-b593-b46a27bf9f3c",
+          "day": "Thursday",
+          "date": "2023-05-11",
+          "time": "08:26",
+          "sleep": "4.5",
+          "mood": "😢 Sad",
+          "energy": "Numb",
+          "notes": "When one door of happiness closes, another opens."
+        },
+        {
+          "id": "9e9231c4-ee41-4664-aa91-61be697bd072",
+          "day": "Friday",
+          "date": "2023-05-12",
+          "time": "08:28",
+          "sleep": "7",
+          "mood": "😰 Anxious",
+          "energy": "Lethargic",
+          "notes": "If you are working on something exciting that you really care about, you don’t have to be pushed. The vision pulls you. "
+        },
+        {
+          "id": "662ba7fc-13a2-47e2-9878-febcb019928e",
+          "day": "Saturday",
+          "date": "2023-05-13",
+          "time": "11:30",
+          "sleep": "9",
+          "mood": "😰 Anxious",
+          "energy": "Restless",
+          "notes": "Optimism is a happiness magnet. If you stay positive good things and good people will be drawn to you."
+        },
+        {
+          "id": "bcece3b1-870b-4aae-9a75-778c3df684db",
+          "day": "Sunday",
+          "date": "2023-05-14",
+          "time": "05:28",
+          "sleep": "3",
+          "mood": "😡 Angry",
+          "energy": "Numb",
+          "notes": "Things may come to those who wait, but only the things left by those who hustle."
+        },
+        {
+          "id": "ba9ce6cf-fd0d-4991-bae6-736a8d2b2f77",
+          "day": "Monday",
+          "date": "2023-05-15",
+          "time": "09:13",
+          "sleep": "5.5",
+          "mood": "😰 Anxious",
+          "energy": "Restless",
+          "notes": "Every action in our lives touches on some chord that will vibrate in eternity. "
+        },
+        {
+          "id": "55b66d43-0df0-4ef6-a126-1002d9831958",
+          "day": "Tuesday",
+          "date": "2023-05-16",
+          "time": "07:36",
+          "sleep": "5.5",
+          "mood": "🤩 Ecstatic",
+          "energy": "Calm",
+          "notes": "Out of clutter, find simplicity. From discord, find harmony. In the middle of difficulty lies opportunity. "
+        },
+        {
+          "id": "7711a41c-ca75-4ffb-975f-dac78e481ee8",
+          "day": "Wednesday",
+          "date": "2023-05-17",
+          "time": "11:10",
+          "sleep": "7.5",
+          "mood": "😨 Scared",
+          "energy": "Numb",
+          "notes": "Optimism is a happiness magnet. If you stay positive, good things and good people will be drawn to you. "
+        },
+        {
+          "id": "8de75de5-90e1-4f73-89c0-0e0c323a9e38",
+          "day": "Thursday",
+          "date": "2023-05-18",
+          "time": "02:32",
+          "sleep": "2",
+          "mood": "😐 Neutral",
+          "energy": "Lethargic",
+          "notes": "Blehhhhhhhhhhhh"
+        },
+        {
+          "id": "a9e558d1-8c9e-4864-9f02-71b4f212f9bd",
+          "day": "Friday",
+          "date": "2023-05-19",
+          "time": "08:54",
+          "sleep": "4.5",
+          "mood": "😨 Scared",
+          "energy": "Restless",
+          "notes": "Dwell on the beauty of life. Watch the stars, and see yourself running with them. "
+        },
+        {
+          "id": "16803569-e6ca-4f13-ad35-5f897c4385a4",
+          "day": "Saturday",
+          "date": "2023-05-20",
+          "time": "10:37",
+          "sleep": "7",
+          "mood": "😢 Sad",
+          "energy": "Numb",
+          "notes": "Life is 10% what happens to us and 90% how we react to it. "
+        },
+        {
+          "id": "1e3f7e62-d108-4b2c-be83-607e72905b96",
+          "day": "Sunday",
+          "date": "2023-05-21",
+          "time": "12:36",
+          "sleep": "8",
+          "mood": "😨 Scared",
+          "energy": "Restless",
+          "notes": "Make improvements, not excuses. Seek respect, not attention."
+        },
+        {
+          "id": "e6db20a8-7bfc-4db3-91bf-16639d1458eb",
+          "day": "Monday",
+          "date": "2023-05-22",
+          "time": "06:37",
+          "sleep": "5",
+          "mood": "😀 Happy",
+          "energy": "Calm",
+          "notes": "Keep away from people who try to belittle your ambitions. Small people always do that, but the really great make you feel that you, too, can become great."
+        },
+        {
+          "id": "4f3b12a3-49f3-4fd2-8b09-a763af768ef2",
+          "day": "Tuesday",
+          "date": "2023-05-23",
+          "time": "10:38",
+          "sleep": "8",
+          "mood": "😨 Scared",
+          "energy": "Restless",
+          "notes": "Success is not final; failure is not fatal: It is the courage to continue that counts."
+        },
+        {
+          "id": "0cca533b-7d8b-445e-86b8-cb5223888755",
+          "day": "Wednesday",
+          "date": "2023-05-24",
+          "time": "07:37",
+          "sleep": "5",
+          "mood": "😡 Angry",
+          "energy": "Numb",
+          "notes": "Just don't feel like it."
+        },
+        {
+          "id": "59bfef71-93ac-4b55-b895-71719d85c0a7",
+          "day": "Thursday",
+          "date": "2023-05-25",
+          "time": "06:37",
+          "sleep": "4",
+          "mood": "😨 Scared",
+          "energy": "Numb",
+          "notes": "Same as yesterday..."
+        },
+        {
+          "id": "902eaa02-a38e-4984-bf3c-f50d11cc966d",
+          "day": "Friday",
+          "date": "2023-05-26",
+          "time": "08:38",
+          "sleep": "6",
+          "mood": "😀 Happy",
+          "energy": "Calm",
+          "notes": "Feeling better today!"
+        },
+        {
+          "id": "416075e0-3792-4f06-8e53-03a02a7ebc81",
+          "day": "Saturday",
+          "date": "2023-05-27",
+          "time": "05:42",
+          "sleep": "3",
+          "mood": "😡 Angry",
+          "energy": "Restless",
+          "notes": "woke up too early for the weekend!"
+        },
+        {
+          "id": "a22a48b2-c32b-4333-a786-c4f4de76f62b",
+          "day": "Sunday",
+          "date": "2023-05-28",
+          "time": "07:40",
+          "sleep": "6",
+          "mood": "🤩 Ecstatic",
+          "energy": "Motivated",
+          "notes": "Woo!"
+        },
+        {
+          "id": "b7288fa2-2325-4a5c-bffc-682119584c81",
+          "day": "Monday",
+          "date": "2023-05-29",
+          "time": "08:43",
+          "sleep": "7",
+          "mood": "😀 Happy",
+          "energy": "Motivated",
+          "notes": "slept so well today!"
+        },
+        {
+          "id": "5d6103c3-88ba-46e4-8ca3-b5f2a2e8d9f6",
+          "day": "Tuesday",
+          "date": "2023-05-30",
+          "time": "08:41",
+          "sleep": "6",
+          "mood": "😀 Happy",
+          "energy": "Restless",
+          "notes": "Big day today so I'm nervous!"
+        },
+        {
+          "id": "31a8f238-e26f-4200-9b3d-b4b3d531c94d",
+          "day": "Wednesday",
+          "date": "2023-05-31",
+          "time": "10:43",
+          "sleep": "6.5",
+          "mood": "😀 Happy",
+          "energy": "Motivated",
+          "notes": "Another good day so far!"
+        },
+        {
+          "id": "7ec9533f-9d1f-49c6-a9b4-b20167ecce38",
+          "day": "Thursday",
+          "date": "2023-06-01",
+          "time": "12:43",
+          "sleep": "13",
+          "mood": "😐 Neutral",
+          "energy": "Lethargic",
+          "notes": "Oops! Slept in too much."
+        },
+        {
+          "id": "a444954a-9c95-4a02-948f-09606c630696",
+          "day": "Friday",
+          "date": "2023-06-02",
+          "time": "07:42",
+          "sleep": "6",
+          "mood": "😐 Neutral",
+          "energy": "Lethargic",
+          "notes": "Another day :)"
+        },
+        {
+          "id": "8de8a22f-31a6-45d9-94a6-86e6da2b334d",
+          "day": "Saturday",
+          "date": "2023-06-03",
+          "time": "10:42",
+          "sleep": "7",
+          "mood": "🤩 Ecstatic",
+          "energy": "Motivated",
+          "notes": "So much sleep today!"
+        },
+        {
+          "id": "faa4ef92-3ef2-4e67-87d9-00aac9b05e3b",
+          "day": "Sunday",
+          "date": "2023-06-04",
+          "time": "10:42",
+          "sleep": "5",
+          "mood": "😀 Happy",
+          "energy": "Motivated",
+          "notes": "I feel like today will be productive!"
+        },
+        {
+          "id": "96b90172-340c-4f3c-9748-a1273885095b",
+          "day": "Monday",
+          "date": "2023-06-05",
+          "time": "10:43",
+          "sleep": "5",
+          "mood": "😰 Anxious",
+          "energy": "Restless",
+          "notes": "What's going on with the sky?"
+        },
+        {
+          "id": "8b273263-df32-49b3-9e4a-d70a08e2cf8b",
+          "day": "Tuesday",
+          "date": "2023-06-06",
+          "time": "09:44",
+          "sleep": "5",
+          "mood": "😨 Scared",
+          "energy": "Restless",
+          "notes": "The sky is looking pretty dark..."
+        },
+        {
+          "id": "1428d8b8-66ce-4f77-ad95-d63d0d52448d",
+          "day": "Wednesday",
+          "date": "2023-06-07",
+          "time": "07:44",
+          "sleep": "4",
+          "mood": "😨 Scared",
+          "energy": "Restless",
+          "notes": "the sky is almost the color of this form! What's going on?"
+        },
+        {
+          "id": "8683660d-9a2e-4510-b749-ff9515561659",
+          "day": "Thursday",
+          "date": "2023-06-08",
+          "time": "09:44",
+          "sleep": "6.5",
+          "mood": "😰 Anxious",
+          "energy": "Restless",
+          "notes": "I think the weather is getting better but I'm still feeling a bit sick."
+        }
+      ],
+      "id": 10
     },
     {
-      "day": "Wednesday",
-      "date": "2023-02-08",
-      "time": "23:31",
-      "sleep": "5",
-      "mood": "😐 Neutral",
-      "energy": "Calm",
-      "notes": "Did you know that some animals live in shoes?",
-      "id": 5
-    },
-    {
-      "day": "Saturday",
-      "date": "2023-02-11",
-      "time": "15:13",
-      "sleep": "8",
-      "mood": "😡 Angry",
-      "energy": "Numb",
-      "notes": "Here are some song lyrics: \nAnd I know, I know, I know, I know\nI know, I know, I know, I know\nI know, I know, I know, I know\nI know, I know, I know, I know\nI know, I know, I know, I know\nI know, I know, I know, I know\nI know, I know\nHey, I ought to leave the young thing alone\nBut ain't no sunshine when she's gone",
-      "id": 6
+      "username": "adfadf",
+      "password": "asdfasdf",
+      "firstname": "sadfsfd",
+      "lastname": "asdfsdfds",
+      "email": "asdfsdfdsf@sfsadf",
+      "posts": [],
+      "id": 11
     }
   ]
 }

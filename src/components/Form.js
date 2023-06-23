@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { v4 as uuidv4 } from "uuid";
 
 
-function Form(){
+function Form({ currentUser, setCurrentUser }){
     const navigate = useNavigate();
     const [formData, setFormData] = useState({
         day: "",
@@ -25,27 +26,73 @@ function Form(){
 
     function handleSubmit(event) {
         event.preventDefault();
-        console.log("submit was pressed", formData)
-        fetch("https://mindlog-db.onrender.com/posts", {
-            method: "POST",
+        console.log("submit form was pressed: ", formData)
+
+        const selectedDate = new Date(`${formData.date} ${formData.time}`);
+        
+        const dayOfWeek = selectedDate.toLocaleDateString(undefined, { weekday: 'long' });
+
+        const newPost = {
+            id: uuidv4(),
+            day: dayOfWeek,
+            date: formData.date,
+            time: formData.time,
+            sleep: formData.sleep,
+            mood: formData.mood,
+            energy: formData.energy,
+            notes: formData.notes,
+        };
+
+        const updatedPosts = [...currentUser.posts, newPost];
+        const updatedCurrentUser = {
+            ...currentUser,
+            posts: updatedPosts,
+        };
+
+        fetch(`http://localhost:4000/users/${currentUser.id}`, {
+            method: "PATCH",
             headers: {
                 "Content-Type": "application/json",
-            }, 
-            body: JSON.stringify({
-                day: formData.day,
-                date: formData.date,
-                time: formData.time,
-                sleep: formData.sleep,
-                mood: formData.mood,
-                energy: formData.energy,
-                notes: formData.notes,
-            }),
-        }) .then(() => navigate("/log"))
+            },
+            body: JSON.stringify(updatedCurrentUser),
+        })
+            .then((response) => response.json())
+            .then(() => {
+                setCurrentUser(updatedCurrentUser);
+                navigate("/log");
+            })
+            .catch((error) => {
+                console.error("Error updating user posts: ", error);
+            });
     }
+
+    // function handleSubmit(event) {
+    //     event.preventDefault();
+    //     console.log("submit was pressed", formData)
+    //     fetch("http://localhost:4000/posts", {
+    //         method: "POST",
+    //         headers: {
+    //             "Content-Type": "application/json",
+    //         }, 
+    //         body: JSON.stringify({
+    //             day: formData.day,
+    //             date: formData.date,
+    //             time: formData.time,
+    //             sleep: formData.sleep,
+    //             mood: formData.mood,
+    //             energy: formData.energy,
+    //             notes: formData.notes,
+    //         }),
+    //     }) .then(() => navigate("/log"))
+    //         .catch((error) => {
+    //             console.error("Error loggin post: ", error);
+    //             alert("There was a problem submitting that entry. Look at the console for errors!")
+    //         });
+    // }
 
     return(
         <div>
-            <form onSubmit={handleSubmit}>
+            <form className="newPostForm" onSubmit={handleSubmit}>
                 <fieldset>
                 <legend>Log your day!</legend>
                 
@@ -91,7 +138,7 @@ function Form(){
                     <label htmlFor="notes">Feel free to add any additional notes here:</label>
                     <textarea type="text" name="notes" placeholder="[optional] Add any additional notes you'd like to remember for today!" rows="5" cols="150" value={formData.notes} onChange={handleChange}/>
                 </div>
-                <input id="formSubmit" type="submit" value="submit form" />
+                <button id="formSubmit" type="submit" value="submit form">Submit</button>
                 </fieldset>
             </form>
         </div>

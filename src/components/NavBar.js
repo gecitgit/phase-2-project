@@ -1,21 +1,30 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import { BsPerson } from "react-icons/bs";
+import { TbLogout } from 'react-icons/tb';
 
-function NavBar() {
+function NavBar({ currentUser, handleLogout }) {
+
     return (
         <div className="navBarStyle">
-            <NavLink to="/" className="navBarChild">
-                Home
-            </NavLink>
-            <NavLink to="/about" className="navBarChild">
-                About
-            </NavLink>
-            <NavLink to="/form" className="navBarChild">
-                Form
-            </NavLink>
-            <NavLink to="/log" className="navBarChild">
-                Journal Log
-            </NavLink>
+            <div className="navBarLeft">                
+                <NavLink to="/loggedin" className="navBarChild">
+                    MindLOG!
+                </NavLink>
+            </div>
+            
+            <div className="navBarRight">
+                <NavLink to="/log" className="navBarChild">
+                    Log
+                </NavLink>
+                <NavLink to="/stats" className="navBarChild">
+                    Stats
+                </NavLink>
+                <NavLink to="/profile" className="navBarChild">
+                    <BsPerson id="prof-logo" />{currentUser.username}  
+                </NavLink>
+                <button className="navBarChild" onClick={handleLogout}><TbLogout /></button>
+            </div>
         </div>
     )
 }
