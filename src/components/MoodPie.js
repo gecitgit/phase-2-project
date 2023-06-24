@@ -91,6 +91,29 @@ function MoodPie({ currentUser }) {
     }
 
 
+    function CustomLegend({ payload }) {
+        return (
+            <div className="custom-legend">
+                <div className="legend-category">
+                {payload.map((entry, index) => (
+                    <div key={`legend-${index}`} className="legend-item">
+                    <span
+                        className="legend-icon"
+                        style={{ backgroundColor: entry.color || "#e85a4f", border: "2px black solid" }}
+                    />
+                    <span 
+                        className="legend-label"
+                        style={{ fontWeight: "bold" }}
+                    >
+                        {entry.value.slice(3)}
+                    </span>
+                    </div>
+                ))}
+                </div>
+            </div>
+            );
+        }
+
     return (
         <div className="stat-box">
             <h2>Total Mood Distribution</h2>
@@ -100,7 +123,6 @@ function MoodPie({ currentUser }) {
 
             <ResponsiveContainer height={350}>
                 <PieChart>
-                {/* <PieChart width={400} height={400}> */}
                 <Pie
                     activeIndex={activeIndex}
                     activeShape={renderActiveShape}
@@ -108,7 +130,7 @@ function MoodPie({ currentUser }) {
                     cx="50%"
                     cy="50%"
                     innerRadius={80}
-                    outerRadius={110}
+                    outerRadius={100}
                     fill="1f1f1f"
                     dataKey="value"
                     legendType="square"
@@ -125,13 +147,10 @@ function MoodPie({ currentUser }) {
                     })}
                 </Pie>
                 <Legend 
-                    iconType="diamond"
-                    wrapperStyle={{
-                        padding: "0px",
-                        maring: "0",
-                        fontWeight: "bold",
-                        stroke: "black"
-                    }}
+                    content={<CustomLegend />} 
+                    verticalAlign="bottom" 
+                    width="100%"
+                    wrapperStyle={{ paddingBottom: "10px" }}
                 />
                 </PieChart>
                 </ResponsiveContainer>

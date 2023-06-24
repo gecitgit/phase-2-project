@@ -1,4 +1,3 @@
-import { json } from "react-router-dom";
 import { BarChart, CartesianGrid, Tooltip, YAxis, XAxis, Bar, ResponsiveContainer } from "recharts";
 
 function SleepByDayBar({ currentUser }) {

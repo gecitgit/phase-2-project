@@ -36,10 +36,10 @@ function Register() {
                 email: newUserData.email,
                 posts: []
             }),
-        })  .then((res) => {
+        }).then((res) => {
             alert("Registration was successful. You are being redirected to the login page.")
             navigate('/login');
-        })  .catch((err) => {
+        }).catch((err) => {
             alert("There was an error: " + err);
         })
     }

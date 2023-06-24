@@ -1,37 +1,4 @@
-import { RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, Radar, Legend, Tooltip, ResponsiveContainer } from "recharts";
-// Ecstatic, Happy, Neutral, Anxious, Sad, Angry, Scared
-
-const data = [
-    {
-        "mood" : "Ecstatic",
-        "sleep" : 6.5
-    },
-    {
-        "mood" : "Happy",
-        "sleep" : 8.5
-    },
-    {
-        "mood" : "Neutral",
-        "sleep" : 5.5
-    },
-    {
-        "mood" : "Anxious",
-        "sleep" : 3
-    },
-    {
-        "mood" : "Sad",
-        "sleep" : 6
-    },
-    {
-        "mood" : "Angry",
-        "sleep" : 4.5
-    },
-    {
-        "mood" : "Scared",
-        "sleep" : 2.5
-    }
-]
-
+import { RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, Radar, Tooltip, ResponsiveContainer } from "recharts";
 
 function MoodRadar({ currentUser }) {
 

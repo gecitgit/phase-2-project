@@ -24,7 +24,7 @@ function Stats({ currentUser }) {
 
     return (
         <div className="stat-container">
-                        <h2 style={{ color: "red", fontSize: "28px"}}>THIS PAGE NEEDS FORMATTING. COPY IS GOOD. Mood and Energy graph needs new tooltip. Energy Pie, Mood Pie need new legends</h2>
+                        <h2 style={{ color: "red", fontSize: "28px"}}>THIS PAGE NEEDS FORMATTING. COPY IS GOOD. Mood and Energy graph needs new tooltip. Energy Pie, Mood Pie need new legends.  MOOD PIE HAS A PROBLEM WITH THE FIRST COLOR NOT BEING READ IN THE PAYLOAD</h2>
             <h1>Hello {currentUser.username}</h1>
             <p>
                 Welcome to the Stats page! Here you'll find some fascinating graphs to help you visualize your mood, energy, and sleep patterns.  Click each tab to reveal the relevant graph and explore your well-being in a visual way. Dive into the data and uncover intriguing insights about yourself. Let the graphs tell your story.
