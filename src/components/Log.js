@@ -106,7 +106,7 @@ function Log({ handleDelete, currentUser, setCurrentUser }){
 
     return (
         <div className="textParentDiv">
-            <h2 style={{ color: "red", fontSize: "28px"}}>Copy is good.  Needs formatting for top text. Need to add * on small box. Need to format filter box. Overhaul "create new entry button" styling. Need to add toast alerts for filtering.</h2>
+            <h2 style={{ color: "red", fontSize: "28px"}}>Copy is good.  Needs formatting for top text. Need to format filter box. Overhaul "create new entry button" styling. Need to add toast alerts for filtering.</h2>
             <h1 className="textTextDiv">Welcome to your Journal</h1>
             <p>
                 Welcome to the Log page! Here, you can view all your log entries and dive int the details of your journey.  Use the "Show Filters" button to refine your search by day of the week, date range, hours slept, mood, and energy.  Customize your view to uncover the moments that matter most.
@@ -128,6 +128,7 @@ function Log({ handleDelete, currentUser, setCurrentUser }){
             ) : (
                 <button
                     onClick={() => setFilterToggle(!filterToggle)}
+                    className="toggleFilter"
                 >
                     show filters
                 </button>
@@ -135,7 +136,7 @@ function Log({ handleDelete, currentUser, setCurrentUser }){
 
 
             
-            <button onClick={() => navigate("/form")} className="deleteLog">+ Create new entry</button>
+            <button onClick={() => navigate("/form")} className="newPostBtn">+ Create new entry</button>
 
             <div className="logContainer">
                 {filteredPosts.length === 0 ? (

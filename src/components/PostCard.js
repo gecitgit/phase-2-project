@@ -4,11 +4,15 @@ import PostInfo from "./PostInfo";
 function PostCard({ post, handleDeletePost, setButtonPopup, handleSeeMore, buttonPopup, selectedPost }) {
     const postDate = new Date(`${post.date} ${post.time}`)
     // const dayName = {postDate.toLocaleDateString(undefined, { weekday: 'long'})}
-
     return (
         <div className="logBoxSmall">
             <span className="postCardTextLarge">
                 {postDate.toLocaleDateString(undefined, { weekday: 'long'})}
+                {post.notes.length > 1 &&
+                    <span style={{ color: "#e85a4f", fontWeight: "bolder"}}>
+                         *
+                    </span>
+                }
             </span>
             <span className="postCardTextMedium">
                 {postDate.toLocaleDateString(undefined, { month: 'long', day: 'numeric', year: 'numeric'})}

@@ -741,3 +741,20 @@ label {
   justify-content: center;
   align-items: center;
 }
+
+.newPostBtn {
+  padding: 10px;
+  border-radius: 0.75rem;
+  outline: 0;
+  background-color: lightgreen;
+  color: #575757;
+  font-weight: bolder;
+}
+
+.toggleFilter {
+  padding: 20px;
+  font-weight: bolder;
+  outline: 0;
+  border: 0;
+  transform: translate(2px, 2px);
+}

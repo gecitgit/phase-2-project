@@ -80,7 +80,7 @@ function LogFilter({ filterToggle, setFilterToggle, currentUser, filteredInfo })
 
     return (
         <div className="logFilterBody">
-            <button onClick={() => setFilterToggle(!filterToggle)}>
+            <button onClick={() => setFilterToggle(!filterToggle)} className="toggleFilter">
                 hide filter
             </button>
             <span>Current filters: </span>
